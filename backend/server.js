@@ -13,7 +13,7 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'http://localhost:5000',
-    'https://your-frontend.onrender.com'  // 🔁 Replace with your frontend URL from Render
+    'vidya-nest-5htt.vercel.app'
   ],
   methods: ['GET', 'POST'],
   credentials: true,
