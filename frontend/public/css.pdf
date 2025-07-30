@@ -1,0 +1,207 @@
+CSS (CASCADING STYLE SHEETS)
+•	Css describes how html elements are to be displayed on screen, paper, or in other media
+•	.css is the extension of the css
+Types of Css:-
+•	Three types of css we have
+
+1.	Inline:-directly include in the tag 
+Ex:- <h1 style=”color:blue;text-align=”center”></h1>
+
+2.	Internal :-we will keep inside the head tag
+Ex:-<head>
+	<style>
+		Any styles
+	</style>
+</head>
+3.	External :- we need to create a new page and we will keep link to the html page
+Ex:-<link rel=”stylesheet” href=”filename.css”>
+Selectors:-
+We have 5 different types of css selectors 
+Syn:-Selector {property :value;}
+Ex:-  h1{color:blue;}
+1.	Universal selector (*):-
+Syn:-*tagname{
+Style Here proprties
+}
+2.	Element Selector:-
+Syn:-   tagname{
+Style Here proprties
+}
+
+3.	Class selector (.):-Class attributes specifies one or more classnames for an element
+Syn: -  .tagname{
+Style Here proprties
+}
+4.	Id Selector (#):-To maintain uniqueness we will use this
+Syn:- #tagname{
+Style Here proprties
+}
+
+
+5.	Combinator Selector:-Combination of two or more selectors,seprate by (,)
+
+Important CSS Properties:-
+•	Font-style
+•	Font-Weight:-increase the boldness of the weight
+•	Text-decoration- 3types underline,overline,linethrough
+•	Border:-how much piexels we want,dashed/solid/dotted,color
+
+Ex:- 	border:solid;
+border:2px;		(or) 	border:solid 2px blue; (shorthand)
+border:red
+
+•	Border-width:- how much width you want to specify for the border, it is nothing about the border thickness
+•	Border-color
+•	Margin:- we have margin-left, margin-right,margin-top,margin-bottom same for padding also we have, outer side of the border is the margin
+o	Space between one content to another content
+o	If we give margin top it will moves to the bottom
+•	Padding: space between the content and the border, border will be same only the content will move to left/right/top/bottom
+o	Shorthand for margin/ padding:- margin/padding: top right bottom left
+•	Color:-color for the text we don’t have any font or text color
+•	Background-color
+•	Cursor:-we will get hand symbol, when we hover on that,we have values like move, crosshair, pointer
+•	Font-size:-values like 10px,20px..etc
+•	Font-family
+•	Height:-  values like 100px,40%..etc ,100% means it takes the whole percentage of the image
+•	Width
+•	Background-image:- url(‘link address’);
+•	Background size:- mostly we use cover, to cover the image for whole width and height
+•	Border-radius:-to maintain curves for the border
+•	Font-style:-normal,italic,oblique
+Note:-Box Model is important topic for the interviews
+
+Psuedo elements:-
+Syn:-Tagelement::hover{
+Style
+}
+We have values like as below
+::first-letter
+::First-line
+::Before
+::After
+::selection
+
+CSS Float:-
+The float property is used for positioning and formatting content
+e.g:- let an img float left to the text in a container
+•	Left:-the element floats to the left of its container
+•	Right:- the element floats to the right of its container
+•	None:-
+To display the paragraph to the particular right/left side we use this
+
+CSS Positioning:-
+The position property specifies the type of positioning method used for an element
+There are 5 diff position values
+1.	Static:-default value
+2.	Relative:-  of we want to keep anything in the middle we want to write top, left, bottom, right 0 value it will come to the center
+3.	Fixed:- If we want to keep in one fixed position we will use this, if we move the content this is also moves 
+4.	Absolute:-  To keep something on the top
+5.	Sticky:-it will stick to the top if we give top, if we move down it will doesn’t change it will stick to the top
+
+Z-Index:-
+•	The Z-Index property specifies the stack order of an element
+•	Z-Index only works on positioned elements (position: absolute, relative, fixed, static, sticky )
+•	We mostly use this to get the content2 on another content1 like paragraph on the  image , for this want to give less value for paragraph and more value for the image
+OverFlow:-
+Visible:-Default, The overflow is not clipped, the content renders outside the element’s box
+Hidden:-the overflow is clipped, and the rest of the content is invisible
+Scroll:-the overflow is clipped, and a scrollbar is added to see the rest of the content
+Auto:-Similar to scroll, but it adds scrollbars only when necessary
+Css Display:-
+None:- It will not display on the website
+Inline:- It will block the content
+Block:- The content will goes outside of the content
+Inline-block:- it blocks the content in that line only like only inside of the card
+Css Grid:-
+•	It offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning
+Syn:-  display: grid; or display: inline-grid
+•	The spaces b/w each column/row are called gaps
+•	You can adjust the gap size by using one of the following properties:
+1.	Column-gap:-if you want gap only between the columns you can use , we want to specify the value in terms of pixeles
+2.	Row-gap:- if you want gap only between the rows you can use , we want to specify the value in terms of pixeles
+3.	Gap
+Breakpoints:-
+How your website will behave across device or viewport sizes
+1.	Extra Small Devices :- (Xs) in bootstrap <576px (device size)
+2.	Small Devices:- (s) in bootstrap >=576px (device size)
+3.	Medium:- (m) in bootstrap  >=768px (device size)
+4.	Large :-(l) in bootstrap  >=992px (device size)
+5.	Extra Large:-  (xl) in bootstrap  >=1200px (device size)
+
+ShortCuts:-
+•	.classname and click on enter to get the div default tag
+•	For creating multiple divs we have a short cut div*(n)  n means no of divs you want
+•	For commenting we have shortcut ctrl + forward slash
+Psudo-class:- stores in var only
+•	We will set css theme by using this
+:root{
+   --background-color:#8bc0f8;
+   --text-color:white;
+   --box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    	--border-radius:10px;
+--spacing-unit:8px;
+}
+•	While using pseudo classes and setting theme we will keep – at the starting of the line
+•	For using the above pseudo classes we want use them like as below
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 2;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+Media Queries:-
+EX1:-
+@media (minwidth:600px){
+	//this will be applicable for only extra small and small
+}
+EX:-2
+@media (minwidth:800px){
+	//this will be applicable for only extra small and small and medium
+}
+EX:-3
+@media (minwidth:1000px){
+	//this will be applicable for only extra small and small and for large
+}
+
+@media for importing the things of responsiveness
+
+Structure:-
+
+@media(min-width:value in px){
+	.classname{
+			prop:val
+		}
+}
+For Example:-
+body{
+	background-color:black;
+}
+@media(min-width:600px){
+	body{
+			background-color:white;
+		}
+}	
+
+	Animations:-
+Hover:-
+Pulse
+Floating
+Tossing
+Fade
+Grow:-Zoom in ,  Zoom out
+Circle
+Curls
+Bubble
+Light
+Entrances:-
+Slide down
+Slide up
+Slide left
+Expand
+Fade-in
+Fade-out
+Entrance
+
+

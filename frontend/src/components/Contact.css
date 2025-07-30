@@ -1,0 +1,20 @@
+.contact-img{
+    height: 450px;
+    width: 400px;
+}
+.contact-container{
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgb(29, 154, 212);
+    padding-right:10px ;
+}
+input{
+    width: 300px;
+}
+textarea{
+    width: 250px;
+}
+.submit-btn{
+    margin-left: 100px;
+}

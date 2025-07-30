@@ -1,0 +1,92 @@
+Copy link form bootstrap5 :- for this open bootstrap5 in chrome or Microsoft edge after opening scoll down upto the starter template copy the code and paste in your folder
+BootStrap:-
+We have mainly two types of layout methods:
+1.	Flexbox (Stable)
+2.	CSS Grid (Unstable)
+Flexbox:-
+Properties:-
+•	We will keep all in the classes in html file
+o	Flexbox container:- d-flex
+o	Direction:-specifies to row or column , flex-row or flex-column
+o	Justify content :- it will moves to the center or left or right in the same row, justify-content-start, justify-content-center, justify-content-start, justify-content-end
+o	Align items:-text-center, text-left
+o	Wrap:-flex-wrap
+o	Wrap content
+
+Bootstrap Grid System:-
+•	It uses a series of containers, rows, and columns to layout and align content.
+•	Its built with flexbox and is fully responsive
+•	It mainly works with 
+1.	Container
+2.	Row
+3.	column
+•	Here every grid contains 12rows and 12 columns, even we take a small part it also contains 12 rows and 12 columns
+•	First we want to wrap everything in the container and then in the row and then column
+•	col-12 it is applicable for all the devices
+•	col-sm-12 only for small devices
+•	col-md-12 for medium devices
+•	col-lg-12 for large devices
+•	col-xs-12 for extra large devices
+•	col-xl-12 for extra extra large devices
+
+Margin Prefixes in bootstrap:-
+•	margin:m-
+•	margin-right: mr-
+•	margin-left: ml-
+•	margin-top: mt-
+•	margin-bottom: mb-
+
+Margin size & values:-
+•	Size range:0-5
+•	0 :- 0
+•	1 :- 0.25* spacer
+•	2:- 0.5 * spacer
+•	3 :- 1* spacer
+•	4 :- 1.5* spacer
+•	5 :- 3* spacer
+
+Here spacer:-16px
+
+Auto:-
+•	It checks the respective parent element and specify the margin
+•	We have like as below
+•	m-auto
+•	ml-auto
+•	mr-auto
+•	mt-auto
+•	mb-auto
+Padding Prefixes in bootstrap:-
+•	padding:p-
+•	padding -right: pr-
+•	padding -left: pl-
+•	padding -top: pt-
+•	padding -bottom: pb-
+
+Padding size & values:-
+•	Size range:0-5
+•	0 :- 0
+•	1 :- 0.25* spacer
+•	2:- 0.5 * spacer
+•	3 :- 1* spacer
+•	4 :- 1.5* spacer
+•	5 :- 3* spacer
+
+Here spacer:-16px
+
+Width Prefixes in bootstrap:-
+width:w-
+Width Values:-
+•	w-25(25%)
+•	w-50(50%)
+•	w-75(75%)
+•	w-100(100%)
+Shadow Prefixes in bootstrap:-
+shadow-none
+For Navbar:-
+•	Search navbar in the search bar of bootstrap  scroll down and copy that link and paste in your file inside the body tag and make changes on that
+
+•	Same like navbar you can get cards,forms,carousel,tables,…etc
+
+
+
+

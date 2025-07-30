@@ -1,0 +1,317 @@
+MongoDb:-  NoSql databse
+•	Go to chrome type for mongodb community server download
+•	And click on first link to download the mongodb
+ 
+•	Scroll down click in download
+•	Double click on the downloaded file  
+•	Don’t change anything click on check box and click on next for all upto you get install button
+•	After completion of community server install
+•	Automatically compass will also be installed
+•	While installing mongodb compass we will get like as below image
+ 
+•	Wait with patience until the bar get completed it will take some more time
+ 
+•	Automatically it will redirect into mongodb compass like as below
+ 
+•	Click on add new connection or + (symbol)
+•	Next Click on save & continue 
+•	Click on open mongodb shell for the mongodb
+•	By default we have like test> type commands here
+•	To check type a simple command show dbs 
+•	It will give what databases are present by default in that like admin, config, local
+ 
+•	To use old database or to create new database we will use 
+o	Syn:-use databsename 
+o	Ex:- use nec
+Collection:-Collection of documents is called as collection
+DataBase:-Collection of collections is called as a database
+•	We want to use one of the object programming language for mongodb
+•	To add collections into database
+MongoDB Commands:-
+To Create Table(Collection):-
+•	Syn:-db.createCollection(“collection-name”)
+•	Ex:- db.createCollection(“users”)
+To insert only one object:-
+	db.users.insertOne([{name:"prudulaSri",age:21,cgpa:8.5}])
+
+To insert multiple objects:-
+	db.users.insertMany([{name:"prudulaSri",age:21,cgpa:8.5},{name:"rupesh",age:18,cgpa:9.5}])
+
+ 
+ 
+•	We use to .find() to print
+For Asc Order:-
+		db.users.find().sort({name:1})
+
+For Desc Order:-
+		db.users.find().sort({name:-1})
+
+To get only 1 value:-
+•	If we will give the number more than the present rows we doesn’t get any error,as the output we will get all the values 
+	db.users.find().limit(1)
+
+ To get highest cgpa only 1 row:-
+		db.users.find().sort({cgpa:-1}).limit(1)
+
+To search for particular one based on the name:-
+		db.users.find({name:"prudulaSri"})
+
+Filter only based on the name:-
+		db.users.find({},{_id:false,name:true})
+
+Update (set):-
+		db.users.updateOne({name:"prudulaSri"},{$set:{fullTime:true}})
+
+Unset:-
+	db.users.updateOne({name:"prudulaSri"},{$unset:{fullTime:""}})
+
+Update Everything in the collection:-
+		db.users.updateMany({},{$set:{fullTime:false}})
+
+ 
+ 
+To update many items:-
+•	We have a new key word exists
+•	If the old value is false we are going to change that into true
+  	    db.users.updateMany({fullTime:{$exists:false}},{$set:{fullTime:true}})
+
+Delete one item:-
+		db.users.deleteOne({name:"prudula"})
+
+Comparison operators:-
+1.	Less than:-lt
+		db.users.find({age:{$lt:20}})
+
+2.	Greater than : gt
+ 		db.users.find({age:{$gt:20}})
+
+3.	Not equal:-ne
+		db.users.find({age:{$ne:20}})
+
+4.	Less than equal:- lte
+		db.users.find({age:{$lte:20}})
+
+5.	Greater than equal :- gte
+		db.users.find({age:{$gte:20}})
+
+6.	In between:-
+		db.users.find({gpa:{$gte:8,$lte:9.5}})
+
+ 
+Checks whether present or not:-
+•	If we will the name which is not present we doesn’t get any error
+		db.users.find({name:{$in:["prudula","rupesh"]}})
+
+To get all except particular one:-
+		db.users.find({name:{$nin:["prudula","rupesh"]}})
+
+Logical Operators:-
+And:- We all know that Both values want to be true for and operator
+		db.users.find({$and: [{fullTime:true},{age:{$lte:25}}]})
+
+Or:- We all know that Both values want to be true for and operator
+		db.users.find({$or: [{fullTime:true},{age:{$lte:20}}]})
+
+Nor:-Both values want to be false
+		db.users.find({$nor: [{fullTime:true},{age:{$lte:20}}]})
+
+Aggregatoins:-
+My orders database  is like as below:-
+		db.orders.aggregate([]) 	(or)	db.orders.find()
+
+•	To check what are present in our database we can use any one of them in above commands 
+ 
+To reshape our document (project):-
+•	To add new key values or to change the values
+		db.orders.aggregate([{$project:{customer:1,amount:1,discount:{$multiply:["$amount               ",0.1]},year:{$year:"$date"}}}])
+
+
+•	Customer and amount are already there in our document
+•	In the above example customer:1 means applying ascending order for the customer and same as like we are applying for amount also
+•	For discount I am applying 10% offer
+•	I am getting date from the previous one and adding to the year
+ 
+
+UnWind:-Nested array will be removed and the values in that array will come like as separate arrays
+		db.orders.aggregate([{$unwind:"$items"}]
+
+ 
+
+For Joins we have lookups here:-
+•	We don’t have any left or right joins in mongodb because we don’t have tables here we are working with documents here everything are like key value pairs
+•	LookUp :- this for joining the collections
+For this we want to create another collection:-
+		db.customers.insertOne({_id:"A",name:"Alice"})
+
+Adding customers to the orders collection:-
+	db.orders.aggregate([{$lookup:{from:"customers",localField:"customer",foreignField:"_id",as:"customer_info"}}])
+
+Output:-
+ 
+Bucket:- To get the data in between boundaries that means in a particular range
+
+db.orders.aggregate([
+  {$bucket:{
+groupBy:"$amount",
+boundaries:[0,100,200,300],
+default:"Other",
+output:{
+count:{$sum:1},
+orders:{$push:"$_id"}
+}
+}
+}
+])
+
+Indexes:-
+Single Field Index:-
+		db.orders.createIndex({customer:1})
+
+Compound Index:-
+		db.orders.createIndex({customer:1,amount:-1})
+
+MultiKey Index:-
+		db.orders.createIndex({items:1})
+
+Output:-
+ 
+
+To get the indexes:-
+db.orders.getIndexes()
+
+ 
+To check the flow of indexes:-
+	db.orders.find({customer:"A"}).explain("executionStats")
+•	To understand all this we want to learn the total related to mongoDb we will get lots of lines as the output as shown in the below image
+ 
+DataModelling:-
+•	Embedded documents approach
+Use When:-
+•	1:1 connections or 1:few relationships
+•	Automatic updates are critical
+•	Read together frequently
+Example for joining books with authors:-
+Creating authors collection:-
+db.authours.insertOne({
+_id:"auth202",
+name:"jane smith",
+speciality:"Database systems"
+});
+
+Creating Books collection:-
+db.books.insertMany([
+{
+_id:"book305",
+title:"MongoDB Essentials",
+author_id:"author202",
+},
+{
+_id:"book306",
+title:"Advanced MongoDB",
+author_id:"author203",
+},
+{
+_id:"book307",
+title:"MongoDb",
+author_id:"author204"
+}]);
+
+•	lookup,unwind and project we are using this 3 at a time this process is called as a reference document approach
+
+db.books.aggregate([
+  {
+    $lookup: {
+      from: "authors",
+      localField: "author_id",
+      foreignField: "_id",
+      as: "author_details"
+    }
+  },
+  {
+    $unwind: "$author_details"
+  },
+  {
+    $project: {
+      title: 1,
+      "author_details.name": 1,
+      "author_details.specialty": 1
+    }
+  }
+]);
+    }
+Schemas:-
+•	For validations and storing we use schemas
+
+Basic Validation:-
+db.createCollection("stu", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["employee_id", "full_name", "department"],
+      properties: {
+        employee_id: {
+          bsonType: "string",
+          pattern: "^EMP-[0-9]{5}$",
+          description: "Must be in format EMP-12345"
+        },
+        full_name: {
+          bsonType: "string",
+          minLength: 3,
+          maxLength: 25
+        },
+        department: {
+          enum: ["Engineering", "HR", "Finance", "Marketing"],
+          description: "Must be a valid department"
+        }
+  
+      }
+    }
+  }
+});
+
+Output:-
+{ ok: 1 }
+Insert one pair into that :-
+db.stu.insertOne({employee_id:"EMP-12345",full_name:"aprudula",department:"HR"})
+
+Output:-
+ 
+
+•	If we will give correct validations we will get acknowledged as true and insertedId object
+•	If we will give wrong validations we will get document failed validation error
+Validation schema for registeration form:-
+db.createCollection("login_validations", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["username", "email", "password"],
+      properties: {
+        username: {
+          bsonType: "string",
+          pattern: "^[A-Z][0-9][a-z]+$",
+          description: "Username must start with a capital letter, followed by a digit, then lowercase letters"
+        },
+        email: {
+          bsonType: "string",
+          pattern: "^[a-zA-Z0-9._%+-]+@gmail\\.com$",
+          description: "Must be a valid Gmail address"
+        },
+        password: {
+          bsonType: "string",
+          minLength: 3,
+          maxLength: 20,
+          description: "Password must be between 3 and 20 characters"
+        }
+      }
+    }
+  }
+})
+
+Inserting document:-
+db.login_validations.insertOne({
+  username: "A1abc", 
+  email: "example@gmail.com",
+  password: "securepass123"
+})
+Output:-
+ 

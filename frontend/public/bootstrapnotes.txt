@@ -1,0 +1,615 @@
+        Bootstrap:-
+        =========
+
+        Bootstrap is a large collection of predefined reusable Code Snippets written in HTML, CSS, and Javascript. The Code Snippets include Buttons, Cards, Carousels, etc.
+
+        How to use Bootstrap?
+
+        To use the Code Snippets provided by Bootstrap, we need to add the below piece of code within the HTML head element. We call it BootstrapCDN.
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        Flexbox Properties
+        1. Flexbox Container
+
+        The Bootstrap class name d-flex defines a Flexbox Container. The direct HTML elements in the Flexbox Container are called flex items.
+
+        <div class="d-flex">
+        <div>
+            <h1>Tourism</h1>
+            <p>Plan your trip.</p>
+            <button>Get Started</button>
+        </div>
+        </div>
+        The HTML container element with the class="d-flex" is a Flexbox Container.
+        The HTML container element div in Flexbox Container is a flex item. Because it is directly inside the Flexbox Container.
+        The HTML main heading, paragraph, and button elements are not flex items. Because these elements are not directly inside the Flexbox Container.
+        Note:
+
+        Wrapping HTML elements in the Flexbox Container is mandatory to apply other flex properties.</MultiLineNote>
+        2. Flex Direction
+
+        The Flex Direction specifies the direction of the flex items in the Flexbox Container.
+
+        Class Name	Direction of the flex items in a Flexbox Container
+        flex-row	Horizontal
+        flex-column	Vertical
+        2.1. flex-row
+
+        The Bootstrap class name "flex-row" is used to move the flex items horizontally in the Flexbox Container.
+
+        <div class="d-flex flex-row">
+        <div>
+            <h1>Tourism</h1>
+            <p>Plan your trip.</p>
+            <button>Get Started</button>
+        </div>
+        </div>
+        2.2. flex-column
+
+        The Bootstrap class name "flex-column" is used to move the flex items vertically in the Flexbox Container.
+
+        <div class="d-flex flex-column">
+        <div>
+            <h1>Tourism</h1>
+            <p>Plan your trip.</p>
+            <button>Get Started</button>
+        </div>
+        </div>
+        Note:
+
+        The Bootstrap class name `flex-row` is the default Flex Direction for the Flexbox Container. So, once `d-flex` is specified, all the flex items in the Flexbox Container display horizontally.
+        3. Justify Content
+
+        The Justify Content specifies the alignment of flex items along the Flex Direction in a Flexbox Container.
+
+        3.1. justify-content-start
+
+        The Bootstrap class name "justify-content-start" is used to align the flex items at the start of the Flexbox Container either horizontally or vertically based on the Flex Direction.
+
+        Flex Direction	Alignment of flex items in a Flexbox Container
+        flex-row	Align flex items horizontally to the left
+        flex-column	Align flex items vertically to the top
+        <div class="d-flex flex-column justify-content-start">
+        <div>
+            <h1>Tourism</h1>
+            <p>Plan your trip.</p>
+            <button>Get Started</button>
+        </div>
+        </div>
+        3.2. justify-content-center
+
+        The Bootstrap class name "justify-content-center** is used to align the flex items at the center of the Flexbox Container either horizontally or vertically based on the Flex Direction.
+
+        Flex Direction	Alignment of flex items in a Flexbox Container
+        flex-row	Align flex items horizontally to the center
+        flex-column	Align flex items vertically to the center
+        <div class="d-flex flex-column justify-content-center">
+        <div>
+            <h1>Tourism</h1>
+            <p>Plan your trip.</p>
+            <button>Get Started</button>
+        </div>
+        </div>
+        3.3. justify-content-end
+
+        The Bootstrap class name "justify-content-end" is used to align the flex items at the end of the Flexbox Container either horizontally or vertically based on the Flex Direction.
+
+        Flex Direction	Alignment of flex items in a Flexbox Container
+        flex-row	Align flex items horizontally to the right
+        flex-column	Align flex items vertically to the bottom
+        <div class="d-flex flex-column justify-content-end">
+        <div>
+            <h1>Tourism</h1>
+            <p>Plan your trip.</p>
+            <button>Get Started</button>
+        </div>
+        </div>
+        3.4. justify-content-between
+
+        The Bootstrap class name "justify-content-between" is used to get equal space between the HTML elements.
+
+        <div class="d-flex flex-column justify-content-between">
+        <div>
+            <h1>Tourism</h1>
+            <p>Plan your trip.</p>
+            <button>Get Started</button>
+        </div>
+        </div>
+        Predefined Styles in Bootstrap
+        1. Button
+
+        The Bootstrap class "btn" is used to style the HTML "button" element.
+
+        <button class="btn">Submit</button>
+        To apply different background colors to the HTML "button" element, you can use the below bootstrap classes.
+
+        class names: btn-primary, btn-secondary, btn-success, btn-danger, btn-info, btn-dark, btn-warning, btn-light
+        Bootstrap provides us different types of buttons. One of them is Outline buttons, that don't have a background color.
+
+        To add the outline buttons in our HTML document, just replace "btn" in the above classes with the "btn-outline".
+
+        for example,
+
+        button Class name	outline button class name
+        btn-primary	btn-outline-primary
+        btn-secondary	btn-outline-secondary
+        btn-success	btn-outline-success
+        btn-danger	btn-outline-danger
+        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-outline-primary">Get Started</button>
+        Note:
+
+        By default, Bootstrap class name `btn` has no background color.
+        2. Text colors
+
+        To apply different colors to the text, you can use the below bootstrap classes.
+
+        class names: text-primary, text-warning, text-secondary, text-success, text-danger, text-dark, text-white
+        <h1 class="text-primary">Tourism</h1>
+        3. Text transform
+
+        To apply different cases like upper case, lower case etc to the text, you can use the below bootstrap classes.
+
+        class names: text-lowercase, text-uppercase, text-capitalize
+        <p class="text-lowercase">PLAN your TRIP wherever YoU wAnT to GO.</p>
+        4. Background colors
+
+        To apply different background colors to an HTML element, you can use the below bootstrap classes.
+
+        class names: bg-primary, bg-warning, bg-secondary, bg-success, bg-danger, bg-info, bg-dark, bg-white
+        <div class="bg-warning"><h1>Tourism</h1></div>
+        Bootstrap provides us with many predefined class names. Some of them are:
+
+        class names: card, carousel, alert, alert-success, alert-link, bg-danger, card-body and many more...
+        You can find the list of class names provided by the bootstrap here
+
+        Warning:
+
+        Using predefined bootstrap class names as a selector in our CSS Ruleset may give unexpected results.
+        Bootstrap Components
+        Carousel
+
+        The Carousel is a slideshow for cycling through images, text, etc. Slides will change every few seconds.
+
+        To add the Carousel to our Favourite Place Detailed View Section Page, we used Bootstrap Carousel Component with the Indicators.
+
+        You can add the different images in the Carousel by changing the image URL in the value of the HTML src attribute.
+
+        <img
+        class="d-block w-100"
+        src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c1-img.png"
+        alt="...">
+        />
+        You can find the Bootstrap Carousel code here
+
+        Note:
+
+        1. To use multiple Carousels in the same HTML document, we have to provide a unique id to each Carousel.
+
+        2. So while adding a new Carousel, you need to change the id of the Carousel. Else, the Carousel controls don’t work.
+        Bootstrap Utilities
+        Embed
+
+        The given code snippet is the Youtube embed code provided by Bootstrap. You can add the different Youtube Videos by changing the Video ID in the value of the HTML "src" attribute.
+
+        The Video ID is in between the "https://www.youtube.com/embed/" and "?rel=0".
+
+        <div class="embed-responsive embed-responsive-16by9">
+        <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/49HTIoCccDY?rel=0"
+            allowfullscreen
+        ></iframe>
+        </div>
+        Note:
+
+        1. Be careful while pasting the video ID. The video ID must be in between the `https://www.youtube.com/embed/` and `?rel=0`. You won't get the video if any character is missed in the value of the HTML `src` attribute.
+
+        2. To embed the Youtube Videos in a smaller size, replace the class name embed-responsive-16by9 with embed-responsive-1by1 in the Bootstrap Video Embed Code. You can find the reference [here](https://getbootstrap.com/docs/4.5/utilities/embed/#aspect-ratios)
+        CCBP UI Kit
+        It is a collection of reusable code snippets similar to Bootstrap. It is specially designed for CCBP training.
+
+        1. Adding CCBP UI Kit to the Web Page
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            ...
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            ...
+        </head>
+        <body>
+            <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+        </body>
+        </html>
+        The CCBP UI Kit Script Code should be placed just before the HTML "body" end tag.
+
+        2. Display Utility
+
+        It is a reusable code snippet to display or hide Section Containers based on user actions.
+
+        You can find the Display Utility code here
+
+    Bootstrap Grid System:-
+    ----------------------
+
+        Bootstrap Grid System is a collection of reusable code snippets to create responsive layouts. It is made up of containers, rows, and columns.
+
+        It uses a 12 column system for layouting. We can create up to 12 columns across the page.
+
+        1. Container
+
+        The purpose of a container is to hold rows and columns.
+
+        <div class="container"></div>
+        Here, the container is a "div" element with the Bootstrap class name "container".
+
+        2. Row
+
+        The purpose of a row is to wrap all the columns.
+
+        <div class="container">
+        <div class="row"></div>
+        </div>
+        Here, the row is a "div" element with the Bootstrap class name "row".
+
+        3. Column
+
+        We should place the columns inside a row and the content inside a column.
+
+        We can specify the number of columns our content should occupy in any device. The number of columns we specify should be a number in the range of "1" to "12".
+
+        <div class="container">
+        <div class="row">
+            <div class="col-12">
+            I'm your content inside the grid!
+            </div>
+        </div>
+        </div>
+        Here, the column is a "div" element with the Bootstrap class name "col-12".
+
+        Note:
+
+        If Bootstrap class name is "col-12", it occupies the entire width available inside the row.
+        The Bootstrap class names "col-*" indicates the number of columns you would like to use out of the possible 12 columns per row. For example, "col-1", "col-5", etc.
+
+        4. Column Wrapping
+
+        When we place more than 12 grid columns in a single row, the extra grid columns will wrap in a new line.
+
+        Responsive Breakpoints
+        1. The Layout at different Breakpoints
+
+        Bootstrap provides different Bootstrap Grid Column class name prefixes for Five Responsive Tiers (Responsive Breakpoints).
+
+        Device	Device Size (Width)	Class Name Prefix
+        Extra small devices	<576px	col-
+        Small devices	>=576px	col-sm-
+        Medium devices	>=768px	col-md-
+        Large devices	>=992px	col-lg-
+        Extra large devices	>=1200px	col-xl-
+        If we define the behaviour of the Bootstrap Grid Column in a particular device, similar behaviour is guaranteed in all devices with larger sizes.
+
+        <div class="container">
+        <div class="row">
+            <div class="col-6">
+            <h1 class="heading">Taj Mahal</h1>
+            <p>The Taj Mahal is on the southern bank of the river Yamuna.</p>
+            </div>
+        </div>
+        </div>
+        1.1 Class names in combination
+
+        We can use a combination of different Bootstrap class names for each Bootstrap Grid Column.
+
+        Note:
+
+        Bootstrap follows **Mobile First Approach**.
+
+        First, design the Layout of a mobile version, and this will be adopted by devices with larger sizes.
+        CSS Box Properties
+        1. Margin
+
+        We can get spacing between the two HTML elements with the CSS Box property "margin".
+
+        To get space only on one particular side, we use Margin Variants.
+
+        • margin-top
+        • margin-right
+        • margin-bottom
+        • margin-left
+
+        We can align HTML Block-level elements horizontally using CSS "margin" property.
+
+        Apart from values that are specified in pixels, it also accepts "auto" keyword as a value.
+
+        Note
+
+        If we specify the CSS "text-align" property to the HTML Block-level element, it aligns the text or HTML Inline elements inside it.
+        1.1 Auto Value
+
+        The child element will be horizontally centred inside the HTML container element.
+
+        <div class="navbar-nav nav-items-center">
+        <a class="nav-link active" href="#">
+            Home
+            <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-link" href="#">About Me</a>
+        <a class="nav-link" href="#">Projects</a>
+        <a class="nav-link" href="#">Testimonials</a>
+        </div>
+        @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+        .nav-items-center {
+        margin: auto;
+        }
+
+        1.2 Auto Value with Margin Variants
+
+        • Using "auto" as a value for the CSS "margin-right" property takes up all the available space, and the element gets aligned to the left.
+        • Using "auto" as a value for the CSS "margin-left" property takes up all the available space, and the element gets aligned to the right.
+
+        <div class="navbar-nav nav-items-right">
+        <a class="nav-link active" href="#">
+            Home <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-link" href="#">About Me</a>
+        <a class="nav-link" href="#">Projects</a>
+        <a class="nav-link" href="#">Testimonials</a>
+        </div>
+        @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+        .nav-items-right {
+        margin-left: auto;
+        }
+
+        Bootstrap Utilities
+        1. Bootstrap Spacing Utilities
+
+        1.1 Margin
+
+        CSS Margin property	Bootstrap class name
+        margin	m-*
+        margin-top	mt-*
+        margin-right	mr-*
+        margin-bottom	mb-*
+        margin-left	ml-*
+        The asterisk ("*") symbol can be any number in the range of 0 to 5. For example, "m-5", "mr-2", "mb-3", etc.
+
+        1.1.1 Margin Values
+
+        Size	Value
+        0	0
+        1	0.25 * spacer
+        2	0.5 * spacer
+        3	1 * spacer
+        4	1.5 * spacer
+        5	3 * spacer
+        The spacer is a variable and has a value of 16 pixels by default.
+
+        For example,
+
+        • "mb-3" = 1 * 16px = 16px
+        • "m-5" = 3 * 16px = 48px
+
+        Note
+
+        Avoid using CSS "margin-left" and "margin-right" properties for **Bootstrap Grid Columns**. It disturbs the Bootstrap Grid System and gives unexpected results.
+        Apart from the numbers 0-5, the margin also has the below Bootstrap class names.
+
+        • "m-auto"
+        • "ml-auto"
+        • "mr-auto"
+
+        1.2 Padding
+
+        CSS Padding property	Bootstrap class name
+        padding	p-*
+        padding-top	pt-*
+        padding-right	pr-*
+        padding-bottom	pb-*
+        padding-left	pl-*
+        The asterisk ("*") symbol can be any number in the range of 0 to 5. For example, "p-3", "pr-1", "pb-5", etc.
+
+        1.2.1 Padding Values
+
+        Size	Value
+        0	0
+        1	0.25 * spacer
+        2	0.5 * spacer
+        3	1 * spacer
+        4	1.5 * spacer
+        5	3 * spacer
+        The spacer is a variable and has a value of 16 pixels by default.
+
+        For example,
+
+        • "p-1" = 0.25 * 16px = 4px
+        • "pt-4" = 1.5 * 16px = 24px
+
+        2. Bootstrap Background Color Utilities
+
+        Values:  bg-primary, bg-secondary, bg-success, bg-info, bg-warning, bg-light, bg-dark, bg-white, bg-danger
+        3 Bootstrap Sizing Utilities
+
+        3.1 Percentage
+
+        You can use the below Bootstrap class names to specify the width of an HTML element in percentage.
+
+        CSS property and value	Bootstrap class name
+        width: 25%	w-25
+        width: 50%	w-50
+        width: 75%	w-75
+        width: 100%	w-100
+        <img
+        src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png"
+        class="menu-item-image w-100"
+        />
+        Note
+
+        By default, the height of the image automatically adjusts when we alter the width.
+        4. Bootstrap Shadow
+
+        To apply shadows to HTML elements, you can use the below Bootstrap class names.
+
+        Bootstrap class names: shadow-none, shadow-sm, shadow, shadow-lg
+        <div class="shadow menu-item-card p-3 mb-3">
+        <img
+            src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png"
+            class="menu-item-image w-100"
+        />
+        <h1 class="menu-card-title">Non-Veg Starters</h1>
+        <a href="" class="menu-item-link">
+            View All
+            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+            </svg>
+        </a>
+        </div>
+        5. Bootstrap Flex Utilities
+
+        5.1 Order
+
+        The Bootstrap Order class names are used to change the visual order of the flex items that appear inside the Flex Container.
+
+        For example, "order-1", "order-2", "order-3", etc.
+
+        We can use any number in the range of "0" to "12" for a bootstrap "order" class name.
+
+        These class names are responsive. So, you can set the order by breakpoint.
+
+        For example, "order-1", "order-md-2", "order-lg-3", etc.
+
+        6. Bootstrap Display Utilities
+
+        We can hide and show HTML elements responsively for each screen size with the Display utilities.
+
+        We can hide HTML Elements using "d--none" class names, where "" represents breakpoints ("sm", "md", "lg", "xl")
+
+        For example, "d-none", "d-sm-none", "d-md-none", etc.
+
+        <div class="my-container">
+        <p class="box">Box 1</p>
+        <p class="box d-none">Box 2</p>
+        <a href="" class="d-md-none">wikipedia</a>
+        </div>
+        Based on the type of HTML element, we can use "d--inline" and "d--block" class names to show HTML element.
+
+        For example, "d-block", "d-md-inline", "d-lg-block", etc.
+
+        7. Bootstrap Position Utilities
+
+        7.1 Fixed Top
+
+        The bootstrap class name "fixed-top" positions an HTML element at the top of the viewport irrespective of the scrolling.
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">...</nav>
+        7.2 Fixed Bottom
+
+        The bootstrap class name "fixed-bottom" positions an HTML element at the bottom of the viewport irrespective of the scrolling.
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-bottom">...</nav>
+        Bootstrap Components
+        1. Bootstrap Navbar
+
+        A Navbar is a navigation header that is placed at the top of the page. With Bootstrap, a Navbar can extend or collapse, depending on the device size.
+
+        1.1. HTML Nav element
+
+        The HTML "nav" element is a container element similar to the HTML "div" element. We use the HTML "nav" element to add a Navbar to our website.
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+        1.2. Nav Items inside Navbar
+
+        <a class="nav-link active" href="#">
+        Home
+        <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+        Disabled
+        </a>
+        1.3. Nav link
+
+        <a class="nav-link" href="#">Features</a>
+        1.4 Adding Links to the Sections
+
+        • Adding id to the section to which we want to navigate.
+
+        <div class="wcu-section pt-5 pb-5" id="wcuSection">...</div>
+        • Providing id as "href" Attribute value to the Nav Item.
+
+        <a class="nav-link active" id="navItem1" href="#wcuSection">
+        Why Choose Us?
+        <span class="sr-only">(current)</span>
+        </a>
+        2. Modal
+
+        Example:
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        Bootstrap Containers
+        1. Container
+
+        The Bootstrap class name "container" provides us default left and right spacings starting from smaller devices for a better user experience. It has one fixed width for each breakpoint in Bootstrap (extra small, small, medium, large, and extra large).
+
+        Device	Device Size (Width)	Container Max Width
+        Extra small devices	< 576px	100%
+        Small devices	>= 576px	540px
+        Medium devices	>= 768px	720px
+        Large devices	>= 992px	960px
+        Extra large devices	>= 1200px	1140px
+        <div class="container">
+        <div class="row">
+            <div class="col-12">
+            <h1>Taj Mahal</h1>
+            <p>
+                The Taj Mahal is an ivory-white marble mausoleum on the southern
+                bank of the river Yamuna in the Indian city of Agra.
+            </p>
+            </div>
+        </div>
+        </div>
+        2. Fluid Container
+
+        The Bootstrap class name "container-fluid" is a full width container, spanning the entire width of the viewport.
+
+        If we don’t need left and right spacings, we can use the Bootstrap class name "container-fluid" instead of "container".
+
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+            <h1>Taj Mahal</h1>
+            <p>
+                The Taj Mahal is an ivory-white marble mausoleum on the southern
+                bank of the river Yamuna in the Indian city of Agra.
+            </p>
+            </div>
+        </div>
+    </div>

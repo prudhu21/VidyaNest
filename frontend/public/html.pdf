@@ -1,0 +1,293 @@
+Html5:-
+Structure:-
+1.	<!DOCTYPEhtml>:- We are saying that our website is in the version5 and it is a document type
+2.	<html>:-It is a root tag, it is the parent of head & body tag
+3.	<head>:-We will keep this tag at the top of the html, we have title inside this
+4.	<body>:-body at the below of the header tag, inside we can write headings,paragraphs,imgs,videos,iframes….etc everything we will write here
+
+
+
+Basic Html Page Example:-
+<!DOCTYPEhtml>   //tells browser you are using 5 version
+<html>
+	<head>
+		<title>My First Page</title>
+	</head>
+	<body>
+		<p>Hello World</p>
+	</body>
+</html>
+•	Extension is .html
+•	Type (!) symbol and press enter we get the default html code it is possible only in the visualstudio code
+•	In the default code en means English language
+•	Device width means it should fit to the device width
+•	To edit html we can use inspect, view elements 
+•	Html is not case sensitive but writing in small letters is better for good programmers ex:-<html>= <HTML>
+Inspect:- (ctrl+shift+i)
+•	Go to the chrome browser-> right click->inspect and hover on your browser you can observe the code will be get changed, it is possible to change the code
+•	For example if you change the placeholder in the code in the position of google search icon you changed that placeholder to Search what you want you will get that change the google search icon it is the temporary thing
+•	After closing the inspect and clicking on the refresh button it will be changed to normal
+•	We can easily fix the bugs by using this inspect
+Comment:-
+•	Hide the data from the website
+•	<!--don’t want to render this on the website -->
+Html Tag:-
+•	A container for some content or other html tags
+•	Ex:- <p>This is a Paragraph</p> here inside the tag it is a content and whole this is combined to call as element
+Html Attributes:-
+•	Attributes are used to add more information to the tag
+•	Ex:- <html lang=”en”>
+ Heading tags:-
+•	Contains 6 tags from h1 to h6 ,h1 is the most important tag and h6 is the least important tag
+Live Server:-
+Open visual studio code (vsc) -> go to the extensions symbol it is 3rd symbol from down an type live server you will get like as below and click on install in the first one
+
+ 
+After Completion of installation click on the GoLive below you have in the last in red color After completion we will get the port no there ,in the below image I have the port no like 5500 
+•	You can check the output in the chrome browser with the port no like as the below image
+ 
+•	In the paragraph tag we can type lorem inside the paragraph to get the default paragraph content
+For autosave in vsc:-
+•	Click on the file and below you can see the autosave we don’t need to save everytime and we don’t need to refresh in the output screen everytime by using this
+Anchor tag:-
+•	Simply write a and enter you will get the default code
+•	Used to add link to your page
+•	<a href=”https://youtube.com”>YouTube</a> for opening youtube we can keep any link inside href
+•	To open the youtube in the new tab use target =>  target=”_main”/ target=”_blank”
+Img Tag:-
+•	This is also a attribute used to keep images
+We have 2 types
+1.	Keeping direct image link :-for this go to the browser and select any img -> right click-> click on the copy img link and paste in the src of img tag while coping we will get link in multiple lines it is not good for programmers so use 2nd type
+
+2.	Give the path from your folder:-for this go to the browser and select any img -> right click-> click on the save image as it will redirect to our desktop then save where you want
+•	<img src=”” alt=””/>
+Basic Html Tags:-
+<bold>:-by default it has some font weight <bold>Attuluri</bold> 
+<i>Prudula</i>
+<u>Sri</u>
+<big>This is Big Tag</big>
+<br>:- To break the line/to enter into new line
+<small>This is Small Tag</small>
+<sub>Subscript:-H2O</sub>
+<sup>Superscript:-H2o</sup>
+<pre>:- Used to display the text as it is without neglecting even single space and next line
+Ex:- <pre>This 
+        is 
+        a 
+        sample
+        pre tag text
+    </pre>
+
+Semantic tags:- The name itself contaning a meaning
+Ex:- <header>,<main>,<footer>
+<section>:-For a section on your pg
+<article>:- For an article on your pg
+<aside> for content aside main content(ads)
+Div Container:-
+•	Container means takes some width and height by default
+•	Div is a container used for other html elements
+•	This is block element takes full width
+•	We can write multiple div’s inside one div
+Span:-
+It is an inline element
+Diff b/w div and span  div is an block element, span is an inline element
+Lists:-
+We have three types of lists
+1.	Ordered list
+2.	Unordered list
+3.	Definition list
+Ordered list:-
+Syn:-
+<ol>
+	<li></li>
+	<li></li>
+</ol>
+Unordered list:-
+Syn: -<ul>
+<li></li>
+<li></li>
+</ul>
+Tables:-
+Used to represent real life table data
+<tr>:-used to display rows
+<td>:- used to display data
+<th>:-used to give column name
+Ex:-<table>
+	<tr>
+		<th>Name</th>
+		<th>RollNo</th>
+	</tr>
+	<tr>
+		<td>Prudula</td>
+		<td>21</td>
+	</tr>
+</table>
+<thead> To wrap table head
+<tbody>To wrap table body
+Iframe:-
+By using this we can have a Website inside another website
+Syntax:-<iframe src=”https://www.youtube.com/watch?v=usymjvyy_mM” frameborder=”0”>Link</iframe>
+•	Frame border is nothing but adding border
+•	Type frame and click on enter to get default code
+•	To get the output as our expectation
+•	We want to add embed in the link
+•	For this we want to change https://www.youtube.com/watch?v=usymjvyy_mM to https://www.youtube.com/embed/usymjvyy_mM
+
+Forms in Html:-
+•	Forms are used to collect the data from the user
+•	Developers are also the users, because they are also using their website
+•	Ex:- sign up/login/help requests/feedback/login/registeration/contact me
+Syn:-
+<form>
+Form content
+</form>
+
+Action in Form:-
+•	Action attribute is used to perform an action after clicking on the submit in the form
+•	Form Elements: Input
+•	EX:-<input type=”text” placeholder=”Enter Name”/>
+•	What ever we are writing that is known as text like alphanumerics and special characters, when we give text it will gives the input bar to enter the text, inside the input we will have placeholder
+•	We have types like mail, number, date,radio,checkbox…etc
+Label:-
+•	Writing name and value are not compulsory
+•	In radio we can able to select only one option
+Radio:-
+<label for=”id1”>
+	<input type=”radio” value=”classx” name=”class” id=”id1”>
+</label>
+
+<label for=”id2”>
+	<input type=”radio” value=”classx” name=”class” id=”id2”>
+</label>
+•	Ex:-Gender, Branch
+CheckBox:-
+<label for=”id1”>
+	<input type=”checkbox” value=”classx” name=”class” id=”id1”>
+</label>
+
+<label for=”id2”>
+	<input type=”checkbox” value=”classx” name=”class” id=”id2”>
+</label>
+
+•	We can able to select multilple options ex:- hoobies, skills ,languages
+TextArea:-
+We can able to write 1000 of lines  ,the data will be in rows and columns
+Syn:-<textarea rows=5 cols=10></textarea>
+
+Select:-
+It is like dropdown
+<select name=”city” id=”city”>
+	<option value=”Delhi”> Delhi</option>
+<option value=”Mumbaii”> Mumbaii </option>
+<option value=”Banglore”> Banglore </option>
+</select>
+Video Tag:-
+Syn:-<video src=”myVid.mp4”>My Video</video>
+Attributes:-
+•	Controls:-we will get playbutton and stop button and pause button,we can control where to start and where to move
+•	Height:-give height of the video you want to get on your website
+•	Width :-give width of the video you want to get on your website
+•	Loop: -plays infinite of times when we open a website
+•	Autoplay:- that video will stop after completion of the video
+•	muted
+Website for better videos:-pixaboy we have the high quality websites
+Max height and width of the video is 1920x1080, make sure that is less than 10mb or 20mb
+Ex:- <video src="./videos/video.mp4" height="300px" width="300px" controls autoplay muted/>
+Icons:-
+•	For icons use font awesome website there go last and click on the get started there you can see lot of icons and styles
+•	Before using the icons you want to import them
+•	For importing we want to copy link form the cdns(font awesome libarary) website we will select first link there because it contains all the styles at last we have all.min.css
+•	We will paste that link inside the head tag
+•	For that type link and click enter you will get default code in that inside the href you can paste this link
+•	After pasting link directly go to the font awesome page click on icons and search for what icons you want
+•	If you want to redirect to the particular page when you click on that you need to keep that icon code inside the anchor tag
+CSS (CASCADING STYLE SHEETS)
+•	Css describes how html elements are to be displayed on screen, paper, or in other media
+•	.css is the extension of the css
+Types of Css:-
+•	Three types of css we have
+
+1.	Inline:-directly include in the tag 
+Ex:- <h1 style=”color:blue;text-align=”center”></h1>
+
+2.	Internal :-we will keep inside the head tag
+Ex:-<head>
+	<style>
+		Any styles
+	</style>
+</head>
+3.	External :- we need to create a new page and we will keep link to the html page
+Ex:-<link rel=”stylesheet” href=”filename.css”>
+Selectors:-
+We have 5 different types of css selectors 
+Syn:-Selector {property :value;}
+Ex:-  h1{color:blue;}
+1.	Universal selector (*):-
+Syn:-*tagname{
+Style Here proprties
+}
+2.	Element Selector:-
+Syn:-   tagname{
+Style Here proprties
+}
+
+3.	Class selector (.):-Class attributes specifies one or more classnames for an element
+Syn: -  .tagname{
+Style Here proprties
+}
+4.	Id Selector (#):-To maintain uniqueness we will use this
+Syn:- #tagname{
+Style Here proprties
+}
+
+
+5.	Combinator Selector:-Combination of two or more selectors,seprate by (,)
+
+Important CSS Properties:-
+•	Font-style
+•	Font-Weight:-increase the boldness of the weight
+•	Text-decoration- 3types underline,overline,linethrough
+•	Border:-how much piexels we want,dashed/solid/dotted,color
+
+Ex:- 	border:solid;
+border:2px;		(or) 	border:solid 2px blue; (shorthand)
+border:red
+
+•	Border-width:- how much width you want to specify for the border, it is nothing about the border thickness
+•	Border-color
+•	Margin:- we have margin-left, margin-right,margin-top,margin-bottom same for padding also we have, outer side of the border is the margin
+o	Space between one content to another content
+o	If we give margin top it will moves to the bottom
+•	Padding: space between the content and the border, border will be same only the content will move to left/right/top/bottom
+o	Shorthand for margin/ padding:- margin/padding: top right bottom left
+•	Color:-color for the text we don’t have any font or text color
+•	Background-color
+•	Cursor:-we will get hand symbol, when we hover on that,we have values like move, crosshair, pointer
+•	Font-size:-values like 10px,20px..etc
+•	Font-family
+•	Height:-  values like 100px,40%..etc ,100% means it takes the whole percentage of the image
+•	Width
+•	Background-image:- url(‘link address’);
+•	Background size:- mostly we use cover, to cover the image for whole width and height
+•	Border-radius:-to maintain curves for the border
+•	Font-style:-normal,italic,oblique
+Note:-Box Model is important topic for the interviews
+
+Psuedo elements:-
+Syn:-Tagelement::hover{
+Style
+}
+We have values like as below
+::first-letter
+::First-line
+::Before
+::After
+::selection
+
+CSS Float:-
+The float property is used for positioning and formatting content
+e.g:- let an img float left to the text in a container
+•	Left:-the element floats to the left of its container
+•	Right:- the element floats to the right of its container
+•	None:-
+To display the paragraph to the particular right/left side we use this

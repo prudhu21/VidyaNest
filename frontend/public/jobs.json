@@ -1,0 +1,184 @@
+{
+  "jobs": [
+    {
+      "id": "job1",
+      "title": "Frontend Developer",
+      "rating": 4.5,
+      "location": "Hyderabad",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
+      "job_description": "Build responsive UIs using React.js"
+    },
+    {
+      "id": "job2",
+      "title": "Backend Developer",
+      "rating": 4.3,
+      "location": "Bangalore",
+      "employment_type": "Part Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Infosys_logo.svg",
+      "job_description": "Develop scalable backend services using Node.js"
+    },
+    {
+      "id": "job3",
+      "title": "Data Scientist",
+      "rating": 4.7,
+      "location": "Chennai",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Wipro_Primary_Logo_Color_RGB.svg",
+      "job_description": "Analyze large datasets and build predictive models"
+    },
+    {
+      "id": "job4",
+      "title": "Cloud Engineer",
+      "rating": 4.6,
+      "location": "Mumbai",
+      "employment_type": "Freelance",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Tata_Consultancy_Services_Logo.svg",
+      "job_description": "Manage AWS and Azure infrastructure"
+    },
+    {
+      "id": "job5",
+      "title": "UI/UX Designer",
+      "rating": 4.2,
+      "location": "Pune",
+      "employment_type": "Internship",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Accenture_2018.svg",
+      "job_description": "Design intuitive user interfaces for mobile apps"
+    },
+    {
+      "id": "job6",
+      "title": "DevOps Engineer",
+      "rating": 4.5,
+      "location": "Delhi",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
+      "job_description": "Implement CI/CD pipelines and monitor deployments"
+    },
+    {
+      "id": "job7",
+      "title": "Product Manager",
+      "rating": 4.9,
+      "location": "Noida",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      "job_description": "Define product roadmap and coordinate with teams"
+    },
+    {
+      "id": "job8",
+      "title": "Cloud Architect",
+      "rating": 4.8,
+      "location": "Hyderabad",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+      "job_description": "Design scalable cloud infra on AWS or Azure"
+    },
+    {
+      "id": "job9",
+      "title": "Python Developer",
+      "rating": 4.2,
+      "location": "Kolkata",
+      "employment_type": "Freelance",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+      "job_description": "Develop APIs and scripts using Python"
+    },
+    {
+      "id": "job10",
+      "title": "Mobile App Developer",
+      "rating": 4.6,
+      "location": "Ahmedabad",
+      "employment_type": "Part Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png",
+      "job_description": "Build mobile apps using React Native or Flutter"
+    },
+    {
+      "id": "job11",
+      "title": "AI Engineer",
+      "rating": 4.9,
+      "location": "Hyderabad",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Intel_logo_2020.svg",
+      "job_description": "Build intelligent systems using ML algorithms"
+    },
+    {
+      "id": "job12",
+      "title": "Security Analyst",
+      "rating": 4.4,
+      "location": "Pune",
+      "employment_type": "Internship",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Kaspersky_Lab_logo.svg",
+      "job_description": "Monitor security threats and maintain policies"
+    },
+    {
+      "id": "job13",
+      "title": "Database Administrator",
+      "rating": 4.3,
+      "location": "Chennai",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/SQL-Database-Logo.png",
+      "job_description": "Manage database performance and backups"
+    },
+    {
+      "id": "job14",
+      "title": "Network Engineer",
+      "rating": 4.0,
+      "location": "Bangalore",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Cisco_logo_blue_2016.svg",
+      "job_description": "Setup and manage network configurations"
+    },
+    {
+      "id": "job15",
+      "title": "System Administrator",
+      "rating": 4.1,
+      "location": "Lucknow",
+      "employment_type": "Part Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Red_Hat_logo.svg",
+      "job_description": "Manage Linux/Windows servers and services"
+    },
+    {
+      "id": "job16",
+      "title": "Business Analyst",
+      "rating": 4.2,
+      "location": "Nagpur",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Deloitte_Logo.png",
+      "job_description": "Identify business needs and provide solutions"
+    },
+    {
+      "id": "job17",
+      "title": "Tech Lead",
+      "rating": 4.7,
+      "location": "Hyderabad",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/HCL_Technologies_Logo.svg",
+      "job_description": "Lead the development team and manage sprints"
+    },
+    {
+      "id": "job18",
+      "title": "Full Stack Developer",
+      "rating": 4.5,
+      "location": "Delhi",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Infosys_Limited_Logo.svg",
+      "job_description": "Build frontend and backend web applications"
+    },
+    {
+      "id": "job19",
+      "title": "QA Engineer",
+      "rating": 4.3,
+      "location": "Coimbatore",
+      "employment_type": "Full Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Atlassian_Logo.svg",
+      "job_description": "Test applications manually and automate using Selenium"
+    },
+    {
+      "id": "job20",
+      "title": "Support Engineer",
+      "rating": 4.0,
+      "location": "Jaipur",
+      "employment_type": "Part Time",
+      "company_logo_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Zendesk_logo.svg",
+      "job_description": "Provide L1/L2 support and resolve issues"
+    }
+  ]
+}

@@ -1,0 +1,959 @@
+Defination related to mern :- Js is a single threaded, synchronous programming language that converts static pages into the dynamic pages 
+Def:-JavaScript is a scripting language as well as a programming language
+•	Introduced by Brendan Eich
+•	This is browser friendly
+•	Js is used to make dynamic webPages
+•	We have es6 modules those are known as ECMA Script
+•	Scripting language not a compilation language
+Single threaded:-It executes a single line and executes single task at a single time
+•	If any error in the first line then it doesn’t move to the second line
+Synchronous:-
+•	It haves some rules to execute, it execute one line by line, if any error gets  it will exit from their and throws error
+•	We can also apply asynchronous objects to synchronous by using await async objects and promises
+Diff b/w scripting languages and programming languages:-
+•	In scripting language we can’t be converted into an executable code
+•	In programming languages the code will be compiled and created to executable code
+Two types of creating js:-
+1.	Internal :- body  bottom  script  code will be written
+2.	External :-  we will keep external file link inside the head in href , external file must be saved with .js
+Variables in js:-variables are containers to store data
+1.	Using var	 ex:- var a=10		we can redeclare and we can reassign				contains global scope
+
+2.	Using let 	ex:- let  a=10 		this can’t be redeclared and  we can be reassigned
+contains block scope or functional scope
+
+3.	Using const :-  ex:- const  a=10 	this can’t be redeclared and can’t be reassigned			contains block scope
+
+4.	Without using anything ex:- a=10
+Hoisting :- it is a js behavior where the function and variable declarations are moved to the top of the scope that means they are moved to the global scope
+Ex:- 1 console.log(a)
+	  let a=10 		we get reference error that means a is not initialized
+Ex:-2 console.log(a)
+	  const a=10                             we get undefined
+Block Scope / functional scope:-
+•	The code inside the braces ({ })
+Ex:- {
+	let a=20;
+console.log(a)
+}
+Global scope:-
+Ex:- let b=20
+        console.log(b)
+
+Data Types in Js:-
+Two types of data types
+1.	Primitive data type:- we can’t store multiple values and multiple data types
+•	String:- anything enclosed in the double quotes “ ” 
+•	Number
+•	Boolean:- true or value
+•	BigInt
+•	Undefined :- not defining value for the variable
+•	Null
+•	Symbol
+•	Object:- contains properties and methods
+
+2.	Non primitive data type:- we can store multiple values and multiple data types
+•	Object 
+•	Arrays
+
+Object Syn:-
+let variable_name={
+key:value,
+key:value,
+.	
+.
+}
+Operators in js:-
+1.	Arithemetic operators :-  +,-,*,%,/,++,--
+2.	Comparison operators:- <,>,<=,>=,=== it also checks about type, checks 				strictly!=,!==,== it doesn’t check about type, doesn’t check strictly
+3.	Bitwise operators :-  & (bitwise and) ,|(bitwise or)  ^(not) , ~(bitwise not) , <<(left 	shift),>>(right shift), >>>(right shift with zero)
+4.	Logical operators:-  &&(logical and), || (logical or) , ! (logical not)
+5.	Assignment operators:- =,+=,-=,*=,/=,%=
+Conditional Statements:-
+1.	if statement:-
+syn:-
+if(expression / condition){
+
+}
+2.	else statement
+syn:- :-
+if(expression / condition){
+//content to be evaluated if condition is true
+}else{
+	//content to be evaluated if condition is false
+}
+
+3.	else-if statement:-
+syn:-
+if(expression / condition){
+//content to be evaluated if condition1 is true
+}else if (condition2){
+	//content to be evaluated if condition2 is true
+}else{
+
+}
+
+•	We will use prompt to take the output from the user
+•	Ex:-let input=prompt(“enter input”)
+Switch Statement:- The switch statement in js is used to perform diff actions
+•	We have break and case in switch statements
+Break:-exit from the current position
+Case :-  inside this we will write the condition
+
+Loops in JS:-
+In js we have loops which offer a quick and easy way to do something repeatedly
+While loop :-  for single condition we use
+Syn:- while(condition){
+	//block of code to be executed
+}
+For loop :-  multiple conditions we can use this
+Syn:-
+for(expression1;expression2;expression3){
+//block of code to be executed
+}
+Generally loops have initialization :- where we start , condition :- is where to end and how to end ,iteration :- which helps condition to execute
+for-of:-used for strings, to check every letter in the string
+syn:-
+for(let val of strVal){
+//do some work
+}
+for-in:-  Used to get the keys in the objects
+syn:-
+for(let key in strVal){
+//do some work
+}
+
+Practice Problems for for loops, operators:-
+1.Ticket cost based on the age:-
+let age=prompt("enter your age");
+let isStudent=false;
+if(age<12 && age>=0){
+    console.log("Ticket Price: $5");
+}else if(age>12 && age<=18 && isStudent===false){
+    console.log("Ticket Price: $8");
+}else if(age>=65){
+    console.log("Ticket Price: $10");
+}else{
+    console.log("Ticket Price: $15");
+}
+2.Number Classifier:-
+let number=prompt("Enter a number");
+let result;
+if(number===0){
+    result="Zero";
+}else if(number%2===0){
+    result="Even";
+    if(number>0){
+        result+= " Positive";
+    }else{
+        result+=" Negative";
+    }
+}else{
+    result="Odd";
+    if(number>0){
+        result+=" Positive";
+    }else{
+        result+=" Negative";
+    }
+}
+3.Day of week checker:-
+let number=prompt("Enter a Number in between 1-7");
+switch (number) {
+    case '1':
+        console.log("Monday");
+        break;
+    
+    case '2':
+        console.log("Tuesday");
+        break;
+    case '3':
+        console.log("Wednesday");
+        break;
+    case '4':
+        console.log("Thursday");
+        break;
+    case '5':
+        console.log("Friday");
+        break;
+    case '6':
+        console.log("Saturday");
+        break;
+    case '7':
+        console.log("Sunday");
+        break;
+    default:
+    console.log("Invalid day number")
+}
+
+4.calculator
+let number1=prompt("Enter a number");
+let number2=prompt("Enter a number");
+let operator=prompt("Enter an operator like +,-,*,/");
+
+switch (operator){
+    case '+':
+        console.log(number1+number2);
+        break;
+    case '-':
+        console.log(number1-number2);
+        break;
+    case '*':
+        console.log(number1*number2);
+        break;
+    case '/':
+        if(number2==0){
+            console.log("Cannot divide by zero");
+        }else{
+            console.log(number1/number2);
+        }
+        break;
+    default:
+    console.log("Invalid operator");
+}
+
+5.leap year:-
+let year=prompt("Enter a year");
+if(year%4===0 && year%100===0){
+    console.log("Leap Year")
+}else{
+    console.log("Not a Leap Year")
+}
+6.Vowel Checker:-
+let alphabet=prompt("enter a alphabet");
+if(alphabet==='a' || alphabet==="e" || alphabet==='i' || alphabet==='o' || alphabet==='u'){
+    console.log("Vowel")
+}else{
+    console.log("Constant")
+}
+
+7.sum of digits:-
+let number = 345;
+let sum = 0;
+while (number > 0) {
+    sum += number % 10;
+    number = Math.floor(number / 10);
+}
+console.log(sum);	
+8.factorial:-
+let n=prompt("enter a number");
+let fact=1;
+for(let i=1;i<=n;i++){
+    fact*=i
+}
+console.log(fact)
+9.Reverse of a number:-
+let n=prompt("enter a number/number");
+let rev=""
+for(let i=(n.length)-1;i>=0;i--){
+    rev+=n[i]
+}
+console.log(rev)
+10.palindrome of a string:-
+let n=prompt("enter a number/number");
+let input=n.toUpperCase()
+let rev=""
+for(let i=(input.length)-1;i>=0;i--){
+    rev+=input[i]
+}
+if(input===rev){
+    console.log("Palindrome")
+}else{
+    console.log("Not a Palindrome")
+}
+
+Array:-
+•	It is a combination of similar data types and non similar data types
+Examples:-
+let array=[“ironman”,”hulk”,”thor”,”batman”];
+let marks=[98,99,90,35,60]
+let info=[“rahul”, 86,”Delhi”]
+Getting highest number in an array:-
+For this we have multiple ways
+1.	Using sort function we will sort all the values in the array and we print last value from the array
+2.	Using max builtin function we can get max value easily
+3.	Using comparing
+
+Ex:-  way3
+
+let array=[31,28,29,30];
+let highnum=array[0];
+for(let i=1;i<=array.length-1;i++){
+    if(array[i]>highnum){
+        highnum=array[i];
+    }else{
+        highnum=highnum;
+    }
+}
+console.log(highnum);
+Sum Of array:-
+let array=[31,28,29,30];
+let highnum=array[0];
+for(let i=1;i<=array.length-1;i++){
+    if(array[i]>highnum){
+        highnum=array[i];
+    }else{
+        highnum=highnum;
+    }
+}
+Array Methods:-
+•	Push:- It adds value in the last of array
+•	Pop:- delete a value from the end
+•	Concatenation:- joins multiple arrays and return result
+•	Unshift:-adds a value starting of array
+•	Shift:- removes starting of value from the array
+•	Slice:- returns a piece of array
+o	Syn:- slice(startIndex,endIndex)
+•	Splice:- used to change the original array
+o	Syn:- splice(startIndex,deleteCount,newElement…)
+
+Remove duplicates of array:-
+let array=[1,1,2,3,4,4,5,5,6,6];
+let uniqueArray=[];
+for(let i=0;i<=array.length-1;i++){
+    let isUnique=false;
+    for(let j=0;j<=uniqueArray.length;j++){
+        if(uniqueArray[j]===array[i]){
+            isUnique=true;
+            break;
+        }
+    }if(!isUnique){
+        uniqueArray.push(array[i]);
+    }
+}
+console.log(uniqueArray);
+
+Objects:-
+In Js objects is a data structures which can store the properties and methods	
+•	Properties:- A named value that describes the objects characteristics
+•	Methods:-  A  functions that can be performed in a objects is called a methods
+Syn:-
+object{
+           prop:value
+}
+Functions in Js:-
+Block of code that performs a specific task, can be invoked whenever needed
+
+•	We have 7 types of functions
+1.	Named function:- also called as pure function
+Syn:- function named(){
+              //block of code
+          }
+2.	Anonymous function :-
+Syn:- function(){
+              //block of code
+          }
+
+3.	Function expression:- it a function by getting the named function assigning to a variable 
+Syn:- let expressionFun =function(){
+              //block of code
+          }expressionFun()	
+
+4.	Arrow function :-
+Syn:- let arrowFun=()=>{
+              //block of code
+          }arrowFun()
+	
+5.	Immediate invoke function:- we can call the function immediately in the starting 
+Syn:- function named(){
+              //block of code
+          }()
+6.	Callback function:-passing one function to the another function as an argument
+7.	Higher order functions:-a function can be passed as an argument to the another function more than one and it returns the output as a function
+	
+forEach Loop in Arrays:-Used to iterate and manipulate in the same array
+•	We can use for the arrays and objects
+•	arr.forEach(calBackFunction)
+Syn:-arr.forEach(val){
+                  console.log(val);
+}
+map():-creates a new array and generates output in a new array
+arr.map(callbackFun(value,index,array))
+Syn:-let newArr=arr.map((val)=>{
+              return val*2;
+         })
+Filter:-
+Creates a new array of elements that give true for a condition
+Eg:- all even numbers
+letnewArray=arr.filter((val)=>{
+         return val%2===0;
+}
+Reduce:-It performs some operations and reduces the array to a single value. it returns that single value
+•	We have two values accumulator and current value
+Syn:- 
+letreducearray=array1.reduce(accumulator,currentValue)=> accumulator+currentValue,initalValue));
+Console.log(reducearr);
+
+DOM(Document Object Manipulation):-
+•	It is a programme interface for html and xml documents.
+•	It represents the structure of a documents as a tree of objects, allowing JavaScript to dynamically access and manipulate content, structure and style
+Critical Rendering:-
+The website works by using the following critical rendering steps
+We have six types
+1.	DOM(document object model)
+2.	Css object model
+3.	Render tree (Js)
+4.	Combining of all those(dom,css,js)
+5.	Painting ( displaying the website)
+6.	Composity:- after painting it will checks everything like what order it is, it will creates 			everything in a order way
+Dom Manipulations:-
+•	When dom manipulations are applied?
+o	When it goes to  render tree then dom manipulations will be applied 
+•	How we can apply dom manipulations?
+o	By using selectors, event listeners, fetching we can apply dom manipulations
+•	Method  Example Returns
+•	getElementById()   document.getElementById(“header”)  Single Element
+•	getElementByClassName  document.getElementByClassName(“btn”)  Html Collection(live)
+•	getElementByTagName  document.getElementByTagName(“div”)  HtmlCollection(live)
+•	querySelector()   document.querySelector(“.className”)  first matching element
+•	querySelectorAll()  document.querySelectorAll(“button”)  
+Example Using Id Selector:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Welcome to DOM</h1>
+    <script>
+        const heading=document.getElementById("heading");
+        heading.textContent="DOM Manipulations script";
+        heading.style.color="blue";
+    </script>
+</body>
+</html>
+Example using class selector:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Login</button>
+    <script>
+        const button=document.getElementsByClassName("btn");
+       button[0].style.backgroundColor="blue"
+       button[0].style.color="white"
+       button[0].style.height="40px"
+       button[0].style.width="80px"
+        
+    </script>
+</body>
+</html>
+
+Example using type selector:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Login</button>
+    <script>
+        const button=document.getElementsByTagName("button");
+       button[0].style.backgroundColor="blue"
+       button[0].style.color="white"
+       button[0].style.height="40px"
+       button[0].style.width="80px"
+        
+    </script>
+</body>
+</html>
+Example using querySelectorAll():-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Login</button>
+    <button class="btn">Submit</button>
+    <script>
+        const button=document.querySelectorAll(".btn");
+       		button.forEach(item=>{
+                item.style.backgroundColor="blue",
+                item.style.color="white",
+                item.style.height="40px",
+                item.style.width="80px";
+    })
+    </script>
+</body>
+</html>
+
+Dom traversal properties:-
+We have different types few are:-
+firstChild:-we use this when we want to style only for first element
+lastChild:- we use this when we want to style only for last element
+nextSibling:-To apply styles for next element
+previousSibling:- for previous element
+
+Example:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ul>
+<script>
+const list=document.querySelector("#list");
+        const firstItem=list.firstElementChild;
+        const lastItem=list.lastElementChild;
+        firstItem.style.color="red";
+        lastItem.style.color="blue";
+        list.style.color="green";
+        list.style.fontSize="25px";
+    </script>
+</body>
+</html>
+Changing content & styles dynamically:-
+•	To change only the text we can use textContent
+•	To change the text along with the tag we can use innerHtml
+
+•	textContent  elment.textContent=”New Text”  changes text
+•	innerHtml  element.innerHtml=”<b>Bold</b>” Changes html 
+•	createElement  document.createElement(div)  used to create a element dynamically
+•	appendChild  parent.appendChild(newElement)  adds new element to the parent at the end
+•	removeChild parent.removeChild(child)  Removes a child
+
+•	Adding Attributes directly:-
+o	Style  element.style.color  change css
+o	setAttribute()  element.setAttribute(“href”,”#”) sets an attribute
+o	getAttribute()  element.getAttribute(“href”)  gets an attribute
+
+Example for inner html:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="maindiv">Hellooo</p>
+    <script>
+        const div=document.querySelector("#maindiv");
+        div.innerHTML="<h1>this is added dynamically</h1>"
+        div.style.color="blue";
+        div.style.fontSize="15px"
+		</script>
+</body>
+</html>
+
+Example 1 for Adding attributes dynamically:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="anchortag">Link</a>
+    <img id="imgtag">
+
+    <script>
+ const anchorTag = document.getElementById("anchortag");
+anchorTag.setAttribute("href", "https://www.youtube.com/");
+const link=document.querySelector("a");
+const href=link.getAttribute("href");
+ link.setAttribute("target","_blank")
+</script>
+</body>
+</html>
+
+
+Example2:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <a id="anchortag">Link</a>
+<img id="imgtag">
+
+    <script>
+        const imgTag = document.getElementById("imgtag");
+        imgTag.setAttribute("src", "./anochring.jpg");
+        imgTag.setAttribute("alt","game image");
+        imgTag.style.height="400px";
+    </script>
+</body>
+</html>
+Example for Remove Attribute:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="anchortag">Link</a>
+    <img id="imgtag">
+    <script>
+        const anchorTag = document.getElementById("anchortag");
+        anchorTag.setAttribute("href", "https://www.youtube.com/");
+
+        const link=document.querySelector("a");
+        const href=link.getAttribute("href");
+        link.setAttribute("target","_blank")
+        link.removeAttribute("target");
+   </script>
+</body>	</html>
+Event Handling:-
+
+Example:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Submit</button>
+    <script>
+        const button=document.getElementById("btn");
+        btn.addEventListener("click",()=>{
+            alert("Form is Submitted");
+        })
+    </script>
+</body>
+</html>
+
+•	When we click on the button then we get an alert box with form is submitted text
+•	In the above example we are using onClick event listener
+
+Example for getting output in console:-
+
+btn.onClick=()=>{
+	console.log(“Button is Clicked”);
+}
+Form Handling:-
+•	Used to prevent the form submissions
+•	We use preventDefault it is used when we don’t want to gt the value when the site is refreshed
+•	We use value to get the value of the input ,
+
+Example for form submission:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username"/>
+        <button type="submit">Submit</button>
+        <p id="value"></p>
+    </form>
+    <script>
+        const input=document.getElementById("username");
+        const form= document.getElementById("loginForm");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            const inputValue=input.value
+            console.log(inputValue)
+        })
+        
+    </script>
+</body>
+</html>
+
+SetTimeout():- used to delay for sometime takes in milliseconds 1000milliseconds=1second
+EX:-
+	console.log(“Start”);
+setTimeout(function(){
+	console.log(“Callback after 2 seconds”);
+},2000);
+console.log(“End”);
+O/P:-
+Start
+End
+Callback after 2 seconds
+Callback Hell :-  very difficult to understand
+•	This is the drawback of callbacks
+•	We have lot of nested callbacks
+•	How to avoid:-
+o	By using named functions to flatten structure, promises, Async/Await
+Example:-
+console.log(“Start”);
+setTimeout(()=>{
+	console.log(“1st step done”);
+	setTimeout(()=>{
+		console.log(“2nd step done”);
+		setTimeout(()=>{
+			console.log(“3rd step done”);
+			setTimeout(()=>{
+				console.log(“4th step done”);
+			},1000);
+		},1000);
+	},1000);
+},1000);
+o/p:-
+Start
+(after 1s) 1st step done
+(after 2s) 2nd step done
+(after 3s) 3rd step done
+(after 4s) 4th step done
+Promises:-
+It is a javascript object that represent eventual completion (or failure) of an asynchronous operation.
+•	To  get the asynchronous programming we will use promises
+•	If we write synchronous programme it will also possible,we can also use promises for synchronous
+•	It contains three states:-
+1.	Pending- Initial state, neither fulfilled nor rejected
+2.	Fulfilled – operation completed successfully
+3.	Rejected  - operation failed
+Syn:-
+const promise =new promise((resolve,reject)=>{
+if(success){
+       resolve(“Success message”);
+}else{
+	reject(“Error Message”)
+}
+});
+Ex:-1To check age using promises in synchronous operations:-
+const checkAge=new Promise((resolve,reject)=>{
+    const age=20;
+    if(age>=18){
+        resolve("Access Granted");
+    }else{
+        reject("Access Denied");
+    }
+});
+checkAge
+    .then((message)=>{
+        console.log(message);
+    })
+    .catch((error)=>{
+        console.log(error); 			});
+O/P:-   Access Granted
+
+**Important example for promises is the below one
+EX:-2  asynchoronous operations in promises
+function fetchData(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const success=true;
+            if(success){
+                resolve("Data fetched successfully");
+            }else{
+                reject("Failed to fetched data");
+            }
+        });
+    });
+}
+
+fetchData()
+    .then((data)=>console.log(data))
+    .catch((err)=>console.log(err));
+O/P:-
+Data fetched successfully
+
+Promises Chaining:-drawback of promises
+•	The promises chaining disadvantage was handled by async/await
+•	Better than nested callbacks
+•	Easier error handling
+•	To give one second for all promises we use promise.all
+•	Disadvantage of promise.all if any one will be rejected we will doesn’t get output
+•	Advantage if all promises will be resolved then we get the output all at a time
+Syn:-function step1(){
+	return new promise((resolve=>{
+		setTimeout(()=>{
+			console.log(“Step1 done”);
+			resolve();
+},1000);
+});
+}
+function step2(){
+	return new promise((resolve=>{
+		setTimeout(()=>{
+			console.log(“Step2 done”);
+			resolve();
+},1000);
+});
+}
+step1()
+	.then => step1()
+	.then(()=> console.log(“all steps completed”));
+Async and Await:-
+These are modern javascript features used to handle asynchronous operations in a clean, readable, way-especially when working with promises
+Async:-
+•	The async keyword is added to a function to make it return a promise automatically
+•	Even if a function returns a value, Javascript wraps it as a promise
+Example:-
+ async function greet(){
+	return “Hello”
+}
+greet().then(msg=> console.log(msg)); 
+
+O/P:- Hello (this output is synchronous when we use await it wil changes to async)
+Await:-
+•	It is a keyword, it can only used inside the async
+•	It pauses the execution of  the async function until the promise is resolved, then it resumes with the result.
+Example:-
+async function getData(){
+           console.log(“Start Fetching….”);
+ 	const result=await fetchData();
+console.log(result);
+console.log(“Done”);
+}
+getData();
+
+MAP:-  The map() method creates a new array by applying a function to each element of the original array.
+
+Ex:- const numbers=[1,2,3,4];
+       const doubled=numbers.map(num=>num*2);
+      console.log(doubled)
+o/p:- [2,4,6,8]
+Filter:-  The filter() method creates a new array with only the elements that pass a test (return true)
+
+Ex:- const numbers=[1,2,3,4,5]
+        const even=numbers.filter(num=> num%2===0);
+        console.log(even);
+   o/p:- [2,4]
+Reduce:- The reduce() method reduces the array to a single value by applying a function to each element and accumulating the result
+•	Accumulator :- it is the value we are taking, it will same for all iterations
+•	Current :- the current  iteration value
+Ex:- const numbers=[1,2,3,4]
+       const  sum=numbers.reduce((accumulator,current)=> accumulator+current,0);
+       console.log(sum);
+o/p:- 10
+Spread:-The spread operator is used to unpack elements from arrays or objects
+•	We can easily merge or copy two arrays or objects
+•	Copy arrays	
+•	Passing array elements as individual arguments
+•	If we change original array then original array we will be also changed to updated array
+
+Ex:- 1 Copying an array
+ 	const arr1=[1,2,3];
+const arr2=[…arr1];
+
+o/p:- [1,2,3]
+
+Ex:-2  Merging arrays
+const arr1=[1,2,3];
+const arr2=[…arr1];
+	const arr3=[4,5];
+	const merged=[…arr1,…arr3];
+
+o/p:- [1,2,3,4,5]
+
+Ex:-3  Passing elements to a function
+	function  add(a,b,c){
+		return a+b+c;
+	}
+	const numbers=[1,2,3];
+	consle.log(add(…numbers));
+o/p:-6 
+
+Ex:-4 Copying and modifying objects
+	const user ={name:”Alice”,age:25}
+	const updatedUser={…user,age:26};
+       	console.log(updatedUser);
+o/p:- {name:”Alice”,age:26}
+Rest Operator:- The rest parameter is used to collect multiple values into an single array
+•	It destructures the objects or arrays
+•	If  we want a particular part of an array or object we can use destructuring in rest 
+Ex:-1 Function Parameters
+	function sum(…numbers){
+		return numbers.reduce((total,num)=> total+num,0); 	}
+	console.log(sum(1,2,3,4));
+o/p:- 10
+Ex:-2 Array destructuring
+	const [first,…rest]=[10,20,30,40];
+	//first=10	rest=[20,30,40]
+Ex:-3 Object destructuring
+	const person={name:”Bob”,age:30,city:”Paris”};
+	const {name, …otherDetails}=person;
+	//name=”Bob”	otherDetails={age:30,city:”Paris”}
+Shallow Copy:-
+A Shallow copy copies only the top-level values. If the object has nested objects or arrays, the nested references are still shared 
+•	If we apply changes in one thing the changes are applied to another one also
+
+Ex:-  const original={
+	name:”Alice”,
+	details:{
+		age:25
+	}
+};
+const shallowCopy={…original};
+shallowCopy.details.age=30;
+console.log(original.details.age);
+o/p:-30
+Deep Copy:-A deep copy copies all levels of the object or array. No references are shared-everything is fully cloned
+•	structuredClone() is a builtin function, we will share object inside that
+•	here original array is not affected
+Ex:- const original={
+name: “Alice”, 
+details:{
+	age:25
+}
+};
+const deepCopy=structuredClone(original);
+deepCopy.details.age=30;
+console.log(original.details.age)
+o/p:- 25
+JSON:-  JavaScript Object Notation
+•	It is a lightweight format to store and exchange data. It’s like a javascript object but I string format.
+•	In javascript , json is treated as a string and you must parse it to use it like a normal object
+•	Json data is in a string format.
+Parse Json String to Object:-
+const jsonString='{"name":"Alice","age":25}';	
+const obj=JSON.parse(jsonString);
+console.log(typeof(jsonString));
+console.log(obj.name);
+console.log(typeof(obj));
+o/p:-string
+          Alice
+         Object
+Convert object to json string:-
+const jsonString=JSON.stringify(jsonObject)
+console.log(jsonString)
+console.log(typeof(jsonString))
+o/p:- {“name”:”Alice”,”age”:25}
+                         string
+Fetch:-
+•	Jsonplaceholder to get free api’s open in a browser scroll down upto resourcespostscopy url and paste inside the fetch()
+
+Example for fetching extenal link:-
+fetch("https://jsonplaceholder.typicode.com/users/1")
+        .then(res=>res.json())
+        .then(user=>{
+            console.log("Name:",user.name);
+            console.log("Email:",user.email);
+        });
+
+MiniProject on Js:-Weather App
+
+To get weather app api:-
+•	openopen weather mapsigninclick on your usernameclick on my api keysgive api key name  click on generate you will get an api
+•	keep that api key inside the js in a variable api key
+•	now click on api in that pagescroll down you found daily forecast 16 daysclick on apidocscroll down and copy api call to gee api url
+
+For Movies App:-
+•	We can use tmdb and signuplogin
+•	We want to store data into database to store we have local storage and session storage
+•	If we are storing in local storage then if we close our browser unexpectedly then the data will be saved and after opening next time we can continue our work,the previous data will not be lose
+•	When we come out from session storage we will lose the session data so we use local storage mostly
+•	In tmdb we use DOMContentLoaded event in JavaScript to make sure the html content of a web page has been completely loaded and parsed before we try to run our scripts that interact with the DOM (Document Object Model)
+•	Why it is important? :- If your JavaScript tries to access elements (like buttons, inputs, or divs) before they are fully loaded, it might result in errors like null or undefined because those elements don’t exist in the DOM yet
+

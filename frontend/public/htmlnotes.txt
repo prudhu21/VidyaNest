@@ -1,0 +1,248 @@
+    HTML Basic Structure
+    The basic structure of any HTML document is as follows:
+
+    <!DOCTYPE html>
+    <html>
+      <head></head>
+      <body>
+        Your code goes here
+      </body>
+    </html>
+    HTML Elements
+    1. Heading Element
+
+    The HTML "h1" element defines a main heading.
+
+    <h1>Tourism</h1>
+    2. Paragraph Element
+
+    The HTML "p" element defines a paragraph.
+
+    <p>Plan your trip wherever you want to go</p>
+    3. Button Element
+
+    The HTML "button" element defines a button.
+
+    <button>Get Started</button>
+    4. Container Element
+
+    The HTML "div" element defines a container.
+
+    <div>
+      <h1>Tourism</h1>
+      <p>Plan your trip wherever you want to go</p>
+      <button>Get Started</button>
+    </div>
+    5. Image Element
+
+    The HTML "img" element defines an Image.
+
+    Syntax:
+
+    <img src="IMAGE_URL"/>
+    5.1. The "src" Attribute
+
+    The HTML Attribute "src" specifies the path (URL) of the Image.
+
+    <img  src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-img.png"
+    />
+    6. Anchor Element
+
+    The HTML "a" element defines a Hyperlink.
+
+    We use Hyperlinks to navigate to other web resources or a specific element within the HTML document. They are also called links.
+
+    Syntax:
+
+    <a href="URL">Content</a>
+    6.1. HTML "href" Attribute
+
+    The HTML "href" Attribute specifies the URL/ path of the page where the link goes to.
+
+    <a href="https://www.ccbp.in/">Explore CCBP 4.0 Certification Programs</a>
+    6.2. Different ways to use the "Anchor" Element
+
+    6.2.1. Navigate within the same HTML document
+
+    •	The HTML anchor "a" element can also be used to navigate to different sections within the same HTML document.
+
+    •	Add an HTML "id" attribute to the section that you want to navigate to. Provide the hash symbol "#", and the value of the "id" attribute of that section as a value to the link's HTML "href" attribute.
+
+    Note:
+
+    While navigating to a particular section within the same HTML document, the content of that section doesn't start from the starting of a page when
+
+    1. It has less content to fill the Viewport height and there are no sections after it.
+
+    2. The content of that section and the content of the sections after it has less content to fill the Viewport height.
+    6.2.2. HTML Image Element as Link
+
+        <a href="https://www.ccbp.in/">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/learn-technologies-img.png" />
+        </a>
+    7. Void Elements
+
+    The HTML elements that only have a start tag and do not contain content or end tag are called as Void Elements.
+
+    Syntax:
+
+    <tag />
+    For example, the HTML "img" element.
+
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-img.png"/>
+    8. Line Break Element
+
+    The HTML "br" element helps to break the text and continue it in the next line.
+
+    <p>
+      Twinkle, twinkle, little star, <br />
+      How I wonder what you are!
+    </p>
+    9. Horizontal Rule Element
+
+    The HTML "hr" element inserts a horizontal line and helps to separate the content.
+
+    <h1 class="heading">
+      Twinkle Twinkle Little Star
+    </h1>
+    <hr />
+    <p>
+      Twinkle, twinkle, little star.
+    </p>
+    <hr />
+    10. HTML Lists
+
+    The List is a way to group related pieces of information so that they are easy to read and understand.
+
+    For example, Shopping list, Todo list, etc.
+
+    There are mainly two types of Lists available in HTML.
+
+    • Unordered List
+    • Ordered List
+
+    11. Unordered List
+
+    It is a collection of related items that have no special order or sequence.
+
+    For example, List of Hobbies
+
+    • Painting
+    • Reading Books
+    • Playing the Guitar
+
+    The Unordered List starts with "<ul>" tag. It wraps around all the list items and each list item starts with the "<li>" tag.
+
+    <ul>
+      <li>Painting</li>
+      <li>Reading Books</li>
+    </ul>
+    By default, list items in the Unordered List are marked with bullets.
+
+
+    Values: square, circle, disc, none
+    12. Ordered List
+
+    It is a collection of related items that follow some order or have a sequence.
+
+    For example, Web Technologies
+
+    HTML
+    CSS
+    JavaScript
+    The Ordered List starts with "<ol>" tag. It wraps around all the list items and each list item starts with the "<li>" tag.
+
+    <ol>
+      <li>Go through the HTML elements and CSS properties</li>
+      <li>Complete the Todolist Coding Practice</li>
+      <li>Go through the Bootstrap Concepts</li>
+    </ol>
+    By default, list items in the Ordered List are marked with numbers.
+
+    HTML Attributes:-
+    ---------------
+
+    1. HTML "id" Attribute
+
+    The HTML "id" attribute specifies a unique id for an HTML element. The value of the "id" attribute must be unique within the HTML document.
+
+    <div id="section1">Section 1</div>
+    Warning:
+
+    1. The CCBP UI kit works only if the value of the HTML `id` attribute of the container section has the prefix as `section`.
+    2. So, the id which we specify for any section should always contain its prefix as `section` if you are using CCBP UI Kit.
+    2. HTML "onclick" Attribute
+
+    The "onclick" event occurs when the user clicks on an HTML Element.
+
+    <button class="btn btn-primary" onclick="display('section3')">
+      Go to Section 3
+    </button>
+    The value of an HTML "onclick" attribute should be enclosed in double-quotes and the value inside the brackets of "display()" should be enclosed in single quotes.
+
+    3. The "src" Attribute
+
+    The HTML Attribute "src" specifies the path (URL) of the Image.
+
+    <img
+      src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-img.png"
+    />
+    4. HTML "href" Attribute
+
+    The HTML "href" Attribute specifies the URL/ path of the page where the link goes to.
+
+    <a href="https://www.ccbp.in/">Explore CCBP 4.0 Certification Programs</a>
+    5. HTML "target" Attribute
+
+    The HTML "target" Attribute specifies where to open the linked web resource.
+
+    <a href="https://www.ccbp.in/" target="_blank">Explore CCBP 4.0 Certification Programs</a>
+
+    HTML Elements:-
+    --------------
+    
+    In general, HTML elements can be divided into two categories.
+
+    • Block-level Elements
+    • Inline Elements
+
+    1. Block-level Elements
+
+    These elements always start in a new line and take up the full width available. So, an HTML Block-level element occupies the entire horizontal space of its parent element.
+
+    For example, the HTML "h1" element, "p" element, "div" element, etc.
+
+    <h1 class="heading">The seven wonders of the world</h1>
+    <p class="paragraph">The Taj Mahal is one of the seven wonders of the world</p>
+    2. Inline Elements
+
+    These elements do not start in a new line and only take up as much width as necessary.
+
+    For example, the HTML "button" element, "img" element, "a" element, etc.
+
+    <img
+      src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/mysore-palace2-img.png"
+      class="image"
+    />
+    <img
+      src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/varanasi1-img.png"
+      class="image"
+    />
+    <p class="paragraph">
+      The <a class="link-text" href="https://en.wikipedia.org/wiki/Taj_Mahal">Taj Mahal</a>
+      is one of the seven wonders of the world.
+    </p>
+    3. HTML Span Element
+
+    The HTML "span" element is a generic inline container element which is mainly used for styling text in HTML Elements.
+
+    <p class="wcu-card-description">
+      Food Coupons & Offers upto
+      <span class="offers">50% OFF</span>
+      and Exclusive Promo Codes on All Online Food Orders.
+    </p>
+    .offers {
+      color: #323f4b;
+      font-style: italic;
+      font-weight: 600;
+    }
