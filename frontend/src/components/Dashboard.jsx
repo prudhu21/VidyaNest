@@ -6,7 +6,7 @@ import './Dashboard.css';
 import { Button, Modal, Form, InputGroup } from 'react-bootstrap';
 import { BsChatDots, BsSend } from 'react-icons/bs';
 
-const Dashboard = () => {
+const Dashboard = ({baseUrl}) => {
   const [showChat, setShowChat] = useState(false);
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');

@@ -4,7 +4,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import './InterviewQuestions.css'
 import Accordion from 'react-bootstrap/Accordion';
 
-const InterviewQuestions = () => {
+const InterviewQuestions = ({baseUrl}) => {
   return (
     <Tabs
       defaultActiveKey="profile"

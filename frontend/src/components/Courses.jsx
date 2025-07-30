@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Courses.css'
 import { useNavigate } from 'react-router-dom';
 
-const Courses = () => {
+const Courses = ({baseUrl}) => {
   const navigate = useNavigate();
   const [searchInput, setSearchInput] = useState('');
 

@@ -20,7 +20,7 @@ const salaryRangesList = [
   { salaryRangeId: '4000000', label: '40 LPA and above' },
 ]
 
-const JobsPage = () => {
+const JobsPage = ({baseUrl}) => {
   const [jobs, setJobs] = useState([])
   const [searchInput, setSearchInput] = useState('')
   const [employmentFilters, setEmploymentFilters] = useState([])

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Contact.css'
 
-const Contact = () => {
+const Contact = ({baseUrl}) => {
     return (
       <div className='d-flex'>
         <div>

@@ -3,7 +3,7 @@ import './RegisterPg.css'
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
-const RegisterPg = () => {
+const RegisterPg = ({baseUrl}) => {
   const navigate=useNavigate();
 
   return (

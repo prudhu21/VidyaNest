@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router-dom'
 
-const Job=()=>{
+const Job=({baseUrl})=>{
     const navigate = useNavigate()
 
     return(
