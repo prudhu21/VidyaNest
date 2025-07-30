@@ -2,15 +2,42 @@ import React, { useState } from 'react'
 import './LoginPg.css'
 import Button from 'react-bootstrap/Button';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-const LoginPg = () => {
+const LoginPg = ({baseUrl}) => {
   const navigate=useNavigate();
   const [role,setRole]=useState("student");
 
-  const handleLogin = () => {
-    if (role === 'teacher') {
-      navigate('/teacher-dashboard'); 
-    } else if (role === 'student') {
-      navigate('/sidenav'); 
+  
+  const handleLogin = async () => {
+    try {
+      const response = await fetch(`${baseUrl}/api/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+          role,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // You can store token or user info if needed
+        // localStorage.setItem("token", data.token);
+
+        if (role === 'teacher') {
+          navigate('/teacher-dashboard');
+        } else if (role === 'student') {
+          navigate('/sidenav');
+        }
+      } else {
+        alert(data.message || "Login failed");
+      }
+    } catch (err) {
+      console.error("Login error:", err);
+      alert("Something went wrong. Please try again later.");
     }
   };
 

@@ -24,6 +24,9 @@ import { useState } from 'react';
 import Job from './components/Job';
 import JobsPage from './components/JobsPage';
 
+const baseUrl = process.env.REACT_APP_BACKEND_URL;
+
+
 function App() {
   const [pdfUrl, setPdfUrl] = useState(null);
 
@@ -31,27 +34,27 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<LoginPg/>}></Route>
-      <Route path='/register' element={<RegisterPg/>}></Route>
-      <Route path='/sidenav' element={<LeftTabsExample/>}></Route>
-      <Route path='/dashboard' element={<Dashboard/>}></Route>
-      <Route path='/courses' element={<Courses/>}></Route>
-      <Route path='/interview' element={<InterviewQuestions/>}></Route>
-      <Route path='/pdfs' element={<Pdfs/>}></Route>
-      <Route path='/settings' element={<Settings/>}/>
-      <Route path='/profile' element={<Profile/>}/>
-      <Route path='/contact' element={<Contact/>}/>
-      <Route path='/mernfs' element={<MernFs/>}/>
-      <Route path='/editor' element={<EditorComponents/>}/>
-      <Route path='/job' element={<Job/>}/>
-      <Route path="/jobs/:id" element={<JobsPage/>}/>
+      <Route path='/' element={<LoginPg baseUrl={baseUrl}/>}></Route>
+      <Route path='/register' element={<RegisterPg baseUrl={baseUrl}/>}></Route>
+      <Route path='/sidenav' element={<LeftTabsExample baseUrl={baseUrl}/>}></Route>
+      <Route path='/dashboard' element={<Dashboard baseUrl={baseUrl}/>}></Route>
+      <Route path='/courses' element={<Courses baseUrl={baseUrl}/>}></Route>
+      <Route path='/interview' element={<InterviewQuestions baseUrl={baseUrl}/>}></Route>
+      <Route path='/pdfs' element={<Pdfs baseUrl={baseUrl}/>}></Route>
+      <Route path='/settings' element={<Settings baseUrl={baseUrl}/>}/>
+      <Route path='/profile' element={<Profile baseUrl={baseUrl}/>}/>
+      <Route path='/contact' element={<Contact baseUrl={baseUrl}/>}/>
+      <Route path='/mernfs' element={<MernFs baseUrl={baseUrl}/>}/>
+      <Route path='/editor' element={<EditorComponents baseUrl={baseUrl}/>}/>
+      <Route path='/job' element={<Job baseUrl={baseUrl}/>}/>
+      <Route path="/jobs/:id" element={<JobsPage baseUrl={baseUrl}/>}/>
 
       //teacher component Routes
       
-      <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
-          <Route path='/uploadnotes' element={<UploadNotes/>}/>
-          <Route path="/uploadvideos" element={<UploadVideos />} />
-          <Route path="/play" element={<PlayVideo />} />
+      <Route path="/teacher-dashboard" element={<TeacherDashboard baseUrl={baseUrl}/>} />
+          <Route path='/uploadnotes' element={<UploadNotes baseUrl={baseUrl}/>}/>
+          <Route path="/uploadvideos" element={<UploadVideos baseUrl={baseUrl} />} />
+          <Route path="/play" element={<PlayVideo baseUrl={baseUrl} />} />
       </Routes>
     </BrowserRouter>
     </>
