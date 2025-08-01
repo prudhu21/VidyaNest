@@ -13,10 +13,10 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:3000',
-    'https://vidya-nest-5htt.vercel.app' // deployed frontend
+    'https://vidya-nest-5htt.vercel.app'
   ],
   methods: ['GET', 'POST'],
-  credentials: true,
+  credentials: true
 }));
 app.use(express.json());
 
@@ -25,22 +25,13 @@ mongoose.connect(process.env.MongoDb_url || '', {
   useUnifiedTopology: true
 })
 .then(() => console.log("✅ MongoDB connected"))
-.catch((err) => {
+.catch(err => {
   console.error("❌ MongoDB connection error:", err.message);
   process.exit(1);
 });
 
-// ✅ Health Check
-app.get('/health', (req, res) => {
-  res.status(200).json({
-    status: 'OK',
-    timestamp: new Date().toISOString()
-  });
-});
-
-
-app.use('/api', authRoutes);     
-app.use('/api', openaiRoutes);   
+app.use('/api', authRoutes);
+app.use('/api', openaiRoutes);
 
 app.all('*', (req, res) => {
   res.status(404).json({ message: 'Route not found' });
@@ -51,7 +42,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
-// ✅ Start Server
 app.listen(port, () => {
-  console.log(`🚀 Server is running at http://localhost:${port}`);
+  console.log(`🚀 Server is running on port ${port}`);
 });
