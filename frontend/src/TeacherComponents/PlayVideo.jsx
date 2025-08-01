@@ -5,6 +5,7 @@ const PlayVideo = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const videoUrl = params.get('url');
+  // kkk
 
   return (
     <div className="text-center" style={{ padding: '20px' }}>

@@ -24,7 +24,7 @@ import { useState } from 'react';
 import Job from './components/Job';
 import JobsPage from './components/JobsPage';
 
-const baseUrl = process.env.REACT_APP_BACKEND_URL;
+const baseUrl = import.meta.env.VITE_REACT_APP_BACKEND_URL || 'http://localhost:5173';
 
 
 function App() {

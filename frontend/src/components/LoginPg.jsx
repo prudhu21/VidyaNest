@@ -3,44 +3,17 @@ import './LoginPg.css'
 import Button from 'react-bootstrap/Button';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 const LoginPg = ({baseUrl}) => {
-  const navigate=useNavigate();
-  const [role,setRole]=useState("student");
+  const navigate = useNavigate();
+  const [role, setRole] = useState("student");
+  const [username, setUsername] = useState(""); 
+  const [password, setPassword] = useState(""); 
 
-  
-  const handleLogin = async () => {
-    try {
-      const response = await fetch(`${baseUrl}/api/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username,
-          password,
-          role,
-        }),
-      });
+  const handleLogin = (e) => {
+    e.preventDefault();
 
-      const data = await response.json();
-
-      if (response.ok) {
-        // You can store token or user info if needed
-        // localStorage.setItem("token", data.token);
-
-        if (role === 'teacher') {
-          navigate('/teacher-dashboard');
-        } else if (role === 'student') {
-          navigate('/sidenav');
-        }
-      } else {
-        alert(data.message || "Login failed");
-      }
-    } catch (err) {
-      console.error("Login error:", err);
-      alert("Something went wrong. Please try again later.");
-    }
+    navigate("/sidenav")
   };
-
+  
   return (
     <div className='login-pg'>
     <div className='d-flex flex-row login-container'>
@@ -48,7 +21,22 @@ const LoginPg = ({baseUrl}) => {
           <form className='text-center login-form'>
             <h1 className='text-heading'>Welcome Back!!</h1><br/>
             <label>UserName:-</label><br/>
-            <input type='text' placeholder='Enter your UserName' required/><br/><br/>
+            <input
+                type='text'
+                placeholder='Enter your UserName'
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              /><br/><br/>
+
+                <input
+                  type='password'
+                  placeholder='Enter Your Password'
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                /><br/><br/>
+
             <label>Password:-</label><br/>
             <input type='password' placeholder='Enter Your Password' required/><br/><br/>
             <p className='forgot-pwd'>Forgot Password?</p>
