@@ -11,7 +11,11 @@ const LoginPg = ({baseUrl}) => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    navigate("/sidenav")
+    if (role === "teacher") {
+    navigate("/teacher-dashboard");
+  } else if (role === "student") {
+    navigate("/sidenav");
+  }
   };
   
   return (
@@ -28,7 +32,7 @@ const LoginPg = ({baseUrl}) => {
                 onChange={(e) => setUsername(e.target.value)}
                 required
               /><br/><br/>
-
+              <label>Password:-</label><br/>
                 <input
                   type='password'
                   placeholder='Enter Your Password'
@@ -37,8 +41,7 @@ const LoginPg = ({baseUrl}) => {
                   required
                 /><br/><br/>
 
-            <label>Password:-</label><br/>
-            <input type='password' placeholder='Enter Your Password' required/><br/><br/>
+            
             <p className='forgot-pwd'>Forgot Password?</p>
             <label>Role:-</label>
             <select value={role} onChange={(e) => setRole(e.target.value)}>
