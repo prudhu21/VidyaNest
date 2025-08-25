@@ -1,13 +1,16 @@
 Html5:-
+--------
 Structure:-
+------------
 1.	<!DOCTYPEhtml>:- We are saying that our website is in the version5 and it is a document type
 2.	<html>:-It is a root tag, it is the parent of head & body tag
 3.	<head>:-We will keep this tag at the top of the html, we have title inside this
 4.	<body>:-body at the below of the header tag, inside we can write headings,paragraphs,imgs,videos,iframes….etc everything we will write here
 
 
-
 Basic Html Page Example:-
+-------------------------
+
 <!DOCTYPEhtml>   //tells browser you are using 5 version
 <html>
 	<head>
@@ -24,17 +27,24 @@ Basic Html Page Example:-
 •	To edit html we can use inspect, view elements 
 •	Html is not case sensitive but writing in small letters is better for good programmers ex:-<html>= <HTML>
 Inspect:- (ctrl+shift+i)
+------------------------
 •	Go to the chrome browser-> right click->inspect and hover on your browser you can observe the code will be get changed, it is possible to change the code
 •	For example if you change the placeholder in the code in the position of google search icon you changed that placeholder to Search what you want you will get that change the google search icon it is the temporary thing
 •	After closing the inspect and clicking on the refresh button it will be changed to normal
 •	We can easily fix the bugs by using this inspect
+
 Comment:-
+---------
 •	Hide the data from the website
 •	<!--don’t want to render this on the website -->
+
 Html Tag:-
+----------
 •	A container for some content or other html tags
 •	Ex:- <p>This is a Paragraph</p> here inside the tag it is a content and whole this is combined to call as element
+
 Html Attributes:-
+------------------
 •	Attributes are used to add more information to the tag
 •	Ex:- <html lang=”en”>
  Heading tags:-

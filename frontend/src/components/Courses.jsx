@@ -179,7 +179,7 @@ const Courses = ({baseUrl}) => {
 
   return (
     <div>
-      <div className="search-container mb-4  d-flex">
+      <div className="search-container mb-4 d-flex">
         <button className='btn-outline-success search-btn'>Search</button>
         <input
           type="text"
@@ -198,12 +198,20 @@ const Courses = ({baseUrl}) => {
               <div className="card-body">
                 <h5 className="card-title">{course.title}</h5>
                 <p className="card-text">{course.description}</p>
-                <button 
-                  className='btn-outline-success start-btn' 
-                  onClick={()=>navigate('/mernfs')}
-                >
-                  Start
-                </button>
+                <div className='d-flex flex-row'>
+                  <button 
+                    className='btn-outline-success start-btn' 
+                    onClick={()=>navigate('/mernfs')}
+                  >
+                    Start
+                  </button>
+                  <button 
+                    className='btn-outline-success' 
+                    onClick={()=>navigate('/quiz')}
+                  >
+                    Quiz
+                  </button>
+                </div>
               </div>
               <div className="card-footer">
                 <p className='days'>{course.days}</p>

@@ -1,0 +1,133 @@
+ExpressJs :-
+-----------
+What is ExpressJs:-
+•	Express.js is a Node.js web application framework that simplifies building server side applications
+Why do we use ExpressJs:-
+•	To decrease code length we will use expressjs frame work
+•	Easy to use and ease to integrate with backend
+Postman:-For checking curd operations we will use this postman
+•	Go to chrome and download postman
+•	Download  Windows 64-bit 
+•	After completion of download install that
+•	Click all next and install
+•	After successful installation we will get like as below
+ 
+
+•	In postman we will change the methods and url as shown in below
+•	If we observe the below image we have different types of methods like as below get,post,patch,delete,head and options 
+•	We select what method we want and we will give the url and click on send
+•	By using this we will check the data
+ 
+We need to install ExpressJS:-
+•	For installing write npm i express
+•	npm init –y to install App
+•	For passing the port and getting the result we will write App.listen()
+Example1 (server.js):-
+const express=require('express')
+const App=express();
+const port=3000;
+
+App.get("/",(req,res)=>{
+        res.send("This is my first server")
+})
+
+App.listen(port,()=>{
+    console.log(`Server is running at http://localhost:${port}`)
+})
+To run :- node server.js
+o/p:- This is my first server (we get in the browser)
+Output in postman:-
+•	To check this output in postman select get method
+•	Type url as http://localhost:3000
+•	After typing url click on send we will get output in below inside body like as below image
+ 
+Example2:- 
+App.get('/hello',(req,res)=>{
+    res.send("<h1>Hello this message is from hello route</h1>")
+})
+
+•	Run again and for output type http://localhost3000/hello
+o/p:-Hello this message is from hello route
+	Nodemon:-
+•	Here we want to run everytime when we will change the output and want to reload for negotiating this issue we will download nodemon
+•	For this npm I nodemon
+•	In nodemon for output we will type npm run dev
+ 
+Example:-3 
+App.get('/info',(req,res)=>{
+    console.log("Request Method :",req.method);
+    console.log("Request Url:",req.url);
+    res.send("Check your terminal for request info");
+});
+
+o/p:- in chrome browser & in postman we will get output like as below
+check your terminal for request info 
+•	Output in terminal like as below image
+ 
+Example:-4
+App.get('/greet',(req,res)=>{
+    const name=req.query.name;
+    res.send(`Hello ${name || 'Guest'}`);
+});
+
+What is Routing:-
+Routing in Express means defining how your server responds to different HTTP requests (Get, Post, …etc) for different paths (URLs)
+Example:-
+const express=require('express');
+const app=express();
+const port=3000;
+
+app.use(express.json());
+
+const students=[
+    {id:1,name:"Prudula",course:"Mern Stack"},
+    {id:2,name:"Rupesh",course:"Python Full Stack"},
+    {id:3,name:"rrr",course:"Mern Stack"},
+    {id:4,name:"xxx",course:"Python Full Stack"},
+    {id:5,name:"abc",course:"Mern Stack"},
+    {id:6,name:"123",course:"Python Full Stack"}
+];
+
+app.get("/",(req,res)=>{
+    res.send("<h1>Welcome to Student Management</h1>");
+})
+
+app.get("/students",(req,res)=>{
+    res.json(students);
+})
+
+app.listen(port,()=>{
+    console.log("running")
+})
+Output in our terminal:-
+running
+in chrome browser with localhost:3000:-  Welcome to Student Management
+	       with localhost:3000/students  is like as below 
+
+ {"id":1,"name
+Output in postman is like as below images:-
+
+To get particular id we will do like as below:-
+•	const id = parseInt (req.params.id);
+•	req.params.id  id ’s of array of objects stored in variable you specified
+•	find()  s = s.id === id (simply to compare something we use find () method)
+•	find (s => s.id ===id);
+•	s.id means id of objects id
+•	what we enter id is stored in variable id and compare with array of object ‘s id s.id 
+•	res. status (404) for error
+
+app.get('/students/:id',(req,res)=>{
+    const id=parseInt(req.params.id);
+    const student=students.find(s=> s.id===id);
+    student?res.json(student):res.status(404).send("Student not found")
+});
+
+Output:-
+--------
+
+To get name from a particular id :-
+app.get('/students/:id',(req,res)=>{
+    const id=parseInt(req.params.id);
+    const student=students.find(s=> s.id===id);
+    student?res.json(student.name):res.status(404).send("Student not found")
+});

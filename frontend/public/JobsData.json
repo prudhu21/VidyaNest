@@ -1,0 +1,137 @@
+{
+  "jobsData": [
+    {
+      "id": "1",
+      "company": "Google",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+      "role": "Frontend React Developer",
+      "salaryRange": "$120,000 - $180,000",
+      "skills": ["React", "TypeScript", "JavaScript", "CSS"],
+      "location": "Mountain View, CA",
+      "experienceLevel": "Mid-level",
+      "type": "Full-time",
+      "description": "Join Google's dynamic team to build innovative web applications using React and modern frontend technologies. You'll work on projects that impact billions of users worldwide.",
+      "companyOverview": {
+        "culture": "Google fosters an inclusive environment where creativity and innovation thrive. We value diversity, collaboration, and continuous learning.",
+        "mission": "To organize the world's information and make it universally accessible and useful.",
+        "employees": "150,000+",
+        "founded": "1998"
+      },
+      "applicationLink": "https://careers.google.com",
+      "postedDate": "2024-01-15"
+    },
+    {
+      "id": "2",
+      "company": "Amazon",
+      "logo": "data:image/png;base64,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",
+      "role": "Full Stack Engineer",
+      "salaryRange": "$130,000 - $200,000",
+      "skills": ["Node.js", "React", "AWS", "Python"],
+      "location": "Seattle, WA",
+      "experienceLevel": "Senior",
+      "type": "Full-time",
+      "description": "Build scalable web applications and services for Amazon's e-commerce platform. Work with cutting-edge cloud technologies and microservices architecture.",
+      "companyOverview": {
+        "culture": "Amazon's culture is built on customer obsession, ownership, and innovation. We think big and deliver results that matter.",
+        "mission": "To be Earth's Most Customer-Centric Company.",
+        "employees": "1,500,000+",
+        "founded": "1994"
+      },
+      "applicationLink": "https://amazon.jobs",
+      "postedDate": "2024-01-12"
+    },
+    {
+      "id": "3",
+      "company": "Microsoft",
+      "logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAApVBMVEX/////ugD4UQx+ugAAo/R0tQD/+/n4PwD5/f///fkAnPMAoPT/uAD/tQD+5d7r8974SgD6l3qv03f8s5/E3pxLtvb/yEt3xfj/03dxcXHq6uqioqKOjo6AgIDJycnT09Oqqqrz8/Pf39++vr6Xl5eFhYWnp6e1tbV5eXlsbGzk5OSSkpKcnJz+7unx9+j3KwD6kHBpsQD9zsDZ6r6R0fn/3JH/xDie1Ba2AAAD3klEQVR4nO3c2ZLTRgBG4SYBQ1gSQsLS2mXJkmyJfXn/R6MXyXZRVIXhByYene9iENZS1pluSfbFGIP/qz8lL5fDvPpLcp0FFJvXdxVvluM8uaN4+8d1NhBs7v4mePz3cpwnvyvukI985Lsq8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8knIJyGfhHwS8kk2rx8LVv8nwMw/knfLYd7/K7nOAgAAAMB/ufdU8mE5zsdnik+X+qnj3v0HgvvPl+O8eKh4dLn5bgsenOW7JSAf+ch3ZeSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOSTkE9CPgn5JOST/Lh8X3Prpv8JMAAAcFPV2/q638Iv1PSH43Ld9+5nb0vheJ21Vn5TlyMbpuNyP/gzH/f99x+usWm5db+IZqu/tUuQ5cNxsuX54P9RzjyNQy9RfgWXxOVbzrQcYj5FGo9Q27XkG9t8XhzzMHbKKQzHpNrlaRiIVW/6fGf8tXGXT/OF0a+e5nFatHnW+52K1O3jtqimIUsnswLZWM63isQ2lc9X7BP3s7RD2uW2cYu7cRqm1k1q91K1s53f2C1X/S7uOdqsmuzg9mpa17QtTOp6+j1uviwzwxiWKluH0VfYxLfM/HBq9wd/d0n9+s2Q+5f6kDSMRrcm7Fe4n4chvLK6yZu5IH64maE1p3xVfK3uyjmSv6nGubpz/93YUNTnrG2cpUUYinO+ZEX54lDxp3/Kl2dnm8SL4zjfVxp78A2Lee0y9+swq1eYz7T+nH2kU76hO9sk5svjHHeXPdcrya0dez9CmzhO3Xp/sVtjvtJdvQ7+kvZN+ebhVro7h9+HfH6qdrY2V5i8QZ25TZm8/q4Q7q6nfN1860jLY77zW4eJ3wv4dKu/dbhK7vOGb3PKVy8PLskx3/mDy2Ef7rytH7LxwSX54sFlFU99cz531vHk92Z5bC78Y/MQH5vnjyVbayf32BzCdXZXudVhjPnH5jY8NhszzV+3pHbIzQqE76jMoQsXsMZfvrZp/NDWj1kVpmtfzdvW7qVu/qBWdtlYLctp1jZxsVluOUWabn7+uz/5DBZhMdA81HiDAAAAAElFTkSuQmCC",
+      "role": "Software Engineer",
+      "salaryRange": "$115,000 - $170,000",
+      "skills": ["C#", ".NET", "Azure", "React"],
+      "location": "Redmond, WA",
+      "experienceLevel": "Entry-level",
+      "type": "Full-time",
+      "description": "Develop enterprise-grade software solutions using Microsoft's technology stack. Contribute to products used by millions of businesses worldwide.",
+      "companyOverview": {
+        "culture": "Microsoft empowers every person and organization to achieve more. We foster a growth mindset and inclusive culture.",
+        "mission": "To empower every person and every organization on the planet to achieve more.",
+        "employees": "220,000+",
+        "founded": "1975"
+      },
+      "applicationLink": "https://careers.microsoft.com",
+      "postedDate": "2024-01-10"
+    },
+    {
+      "id": "4",
+      "company": "Meta",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+      "role": "React Native Developer",
+      "salaryRange": "$140,000 - $210,000",
+      "skills": ["React Native", "JavaScript", "iOS", "Android"],
+      "location": "Menlo Park, CA",
+      "experienceLevel": "Mid-level",
+      "type": "Full-time",
+      "description": "Build next-generation mobile applications for billions of users. Work on innovative features for Facebook, Instagram, and WhatsApp.",
+      "companyOverview": {
+        "culture": "Meta focuses on connecting people and building communities. We value bold ideas, quick iteration, and social impact.",
+        "mission": "To bring the world closer together and build the next evolution of social technology.",
+        "employees": "77,000+",
+        "founded": "2004"
+      },
+      "applicationLink": "https://careers.meta.com",
+      "postedDate": "2024-01-08"
+    },
+    {
+      "id": "5",
+      "company": "Apple",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
+      "role": "iOS Developer",
+      "salaryRange": "$125,000 - $190,000",
+      "skills": ["Swift", "iOS", "Xcode", "UIKit"],
+      "location": "Cupertino, CA",
+      "experienceLevel": "Mid-level",
+      "type": "Full-time",
+      "description": "Create beautiful and intuitive iOS applications that delight millions of users. Work on innovative features for iPhone and iPad apps.",
+      "companyOverview": {
+        "culture": "Apple values excellence, innovation, and attention to detail. We believe in creating products that enhance people's lives.",
+        "mission": "To bring the best user experience to customers through innovative hardware, software, and services.",
+        "employees": "164,000+",
+        "founded": "1976"
+      },
+      "applicationLink": "https://jobs.apple.com",
+      "postedDate": "2024-01-05"
+    },
+    {
+      "id": "6",
+      "company": "Netflix",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      "role": "Backend Engineer",
+      "salaryRange": "$135,000 - $195,000",
+      "skills": ["Java", "Spring Boot", "Microservices", "AWS"],
+      "location": "Los Gatos, CA",
+      "experienceLevel": "Senior",
+      "type": "Full-time",
+      "description": "Build high-performance backend systems that power Netflix's streaming platform for 230+ million subscribers worldwide.",
+      "companyOverview": {
+        "culture": "Netflix culture emphasizes freedom and responsibility, innovation, and excellence in everything we do.",
+        "mission": "To entertain the world by connecting people to stories they love.",
+        "employees": "12,000+",
+        "founded": "1997"
+      },
+      "applicationLink": "https://jobs.netflix.com",
+      "postedDate": "2024-01-03"
+    }
+  ],
+  "skillsOptions": [
+    "React", "JavaScript", "TypeScript", "Node.js", "Python", "Java",
+    "C#", ".NET", "AWS", "Azure", "iOS", "Android", "Swift", "React Native",
+    "CSS", "HTML", "Spring Boot", "Microservices", "UIKit", "Xcode"
+  ],
+  "locationOptions": [
+    "Mountain View, CA", "Seattle, WA", "Redmond, WA", "Menlo Park, CA",
+    "Cupertino, CA", "Los Gatos, CA", "Austin, TX", "New York, NY",
+    "Remote", "San Francisco, CA"
+  ],
+  "experienceLevels": [
+    "Entry-level", "Mid-level", "Senior", "Lead", "Principal"
+  ]
+}

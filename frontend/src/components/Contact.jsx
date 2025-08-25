@@ -2,6 +2,36 @@ import React from 'react'
 import './Contact.css'
 
 const Contact = ({baseUrl}) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      email: e.target.email.value,
+      name: e.target.name.value,
+      number: e.target.number.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    };
+
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert("✅ Message sent & saved to MongoDB Atlas!");
+        e.target.reset(); // clear form
+      } else {
+        alert("❌ Something went wrong.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("⚠️ Server error. Please try again later.");
+    }
+  };
+
     return (
       <div className='d-flex'>
         <div>
@@ -9,8 +39,8 @@ const Contact = ({baseUrl}) => {
             className='contact-img'/>
         </div>
         <div className='contact-container'>
-            <p class="pt-3 text-center ">Email Me 🚀</p>
-            <form class="mt-4">
+            <p className="pt-3 text-center ">Email Me 🚀</p>
+            <form className="mt-4" onSubmit={handleSubmit}>
               <input type="email"id="email" placeholder="Your Email" required/><br/><br/>
 
               <input type="text" id="name" placeholder="Your Name" required/><br/><br/>
@@ -21,9 +51,8 @@ const Contact = ({baseUrl}) => {
 
               <textarea type="text" placeholder="Message" id="message" required></textarea><br/><br/>
 
-              <button class="submit-btn btn-outline-primary">Submit</button>
+              <button className="submit-btn btn-outline-primary" type='submit'>Submit</button>
             </form>
-
         </div>
       </div>
     )

@@ -1,7 +1,11 @@
-CSS (CASCADING STYLE SHEETS)
+CSS (CASCADING STYLE SHEETS):-
+------------------------------
+
 •	Css describes how html elements are to be displayed on screen, paper, or in other media
 •	.css is the extension of the css
+
 Types of Css:-
+--------------
 •	Three types of css we have
 
 1.	Inline:-directly include in the tag 
@@ -15,7 +19,9 @@ Ex:-<head>
 </head>
 3.	External :- we need to create a new page and we will keep link to the html page
 Ex:-<link rel=”stylesheet” href=”filename.css”>
+
 Selectors:-
+-----------
 We have 5 different types of css selectors 
 Syn:-Selector {property :value;}
 Ex:-  h1{color:blue;}
@@ -37,10 +43,10 @@ Syn:- #tagname{
 Style Here proprties
 }
 
-
 5.	Combinator Selector:-Combination of two or more selectors,seprate by (,)
 
 Important CSS Properties:-
+---------------------------
 •	Font-style
 •	Font-Weight:-increase the boldness of the weight
 •	Text-decoration- 3types underline,overline,linethrough
@@ -71,6 +77,7 @@ o	Shorthand for margin/ padding:- margin/padding: top right bottom left
 Note:-Box Model is important topic for the interviews
 
 Psuedo elements:-
+------------------
 Syn:-Tagelement::hover{
 Style
 }
@@ -82,6 +89,7 @@ We have values like as below
 ::selection
 
 CSS Float:-
+-----------
 The float property is used for positioning and formatting content
 e.g:- let an img float left to the text in a container
 •	Left:-the element floats to the left of its container
@@ -90,6 +98,7 @@ e.g:- let an img float left to the text in a container
 To display the paragraph to the particular right/left side we use this
 
 CSS Positioning:-
+------------------
 The position property specifies the type of positioning method used for an element
 There are 5 diff position values
 1.	Static:-default value

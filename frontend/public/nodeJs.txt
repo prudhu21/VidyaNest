@@ -1,0 +1,172 @@
+NodeJs:-  It is a run time environment which is used for server side scripting logic
+Event:-  It is a single request and response statement , we can have single or multiple events
+Event loop:-It makes iterations every time
+1.	Micro Tasks:- without applying delay (ex:- fetching)
+2.	Macro Tasks:- with applying delay (ex:- set timers) Timers setTimeout
+3.	Call Stack:-o/p comes to call stack
+Event Driven architecture:-
+•	Node.js works on events and listeners
+•	Instead of following step-by-step instructions, Node.js waits and reacts to events
+•	For Example:- 
+o	When a user sends a request  an event is triggered.
+o	When a file is read  another event is triggered
+•	Each event has a callback function that runs when the event occurs.
+•	This makes Node.js great for apps that need to handle many users at once(like chat apps or real-time updates)
+•	It consists event emmiter , event loop after this we have event handler
+•	Event emmiter:- it emits all the events and sends to the event loop
+•	Event loop :- in event loop we have micro and macro tasks and then the output will be sent to the event handler 
+What can you build with nodeJs:-
+1.	Web Applications (like APIs)
+2.	Real-time chat apps (like Whatsapp clone)
+3.	Restful APIs It means creating api from scratch and going to use that
+4.	Command-line tools
+5.	Microservices
+Core Components of Node.js:-
+•	V8 Engine
+o	Javascript engine built by Google
+o	Compiles Js code to machine code
+•	Libuv:-
+o	It will be build with c++ and c#
+NodeJs Data Flow:-
+•	Your code  [V8 Engine]  runs JS  [Libuv]  handles I/O (e.g:- fs,http)  [Thread pool]  offloads long tasks [Event loop] waits for task to finish Callback runs when task is ready
+Initalization of server:-
+•	npm init it will ask backend package name give that  next asks version it is not mandatory description command test and some more like this
+•	npm init –y (it creates a default package) in terminal
+•	I will get by default like as below
+ 
+•	In the above image we have main in that we have index.js change that to server.js
+•	Create a server.js file to write server logic
+
+Creating server in NodeJs:-
+Http Server:-An Http server handles requests from clients (like web browsers) and sends back responses.
+Why this Server:-
+•	Teaches how the backend comminutes with the frontend.
+•	Builds a foundation to develop web applications and APIs
+•	We have 3000 or 5000 local ports for backend
+Creation of server:-
+•	For server creation we have a bulitin keyword like createServer
+•	We are going to create server inside the server variable in the below example
+•	We have another builtin keyword as listen to get the server by using port name
+Example server.js (file):-
+const http=require('http')
+
+const server=http.createServer((req,res)=>{
+    res.writeHead(200,{'Content-type':'text/plain'});
+    res.end('Hello from Node.js server!');
+});
+
+server.listen(3000,()=>{
+    console.log("Server is running at http://localhost:3000/");
+});
+
+•	To get the output run node server.js in the terminal
+Modules:-
+Modules are reusable blocks of code
+•	Core Modules:- Built into Node.js (e.g., fs,http)
+•	Local Modules:-Your own custom files
+•	Third party modules:-Installed via npm (e.g., express)
+Core Modules :-
+Example:- By using os we can get our system platform
+sever.js:-
+const os=require('os')
+console.log(os.platform())
+
+o/p:- win32 (we will get output in our terminal only)
+Local modules:-we can create our own functions here
+Example:-
+math.js:-
+function add(a,b){
+    return a+b;
+}
+
+module.exports=add;
+
+server.js:-
+const add=require('./math');
+console.log(add(5,3));
+
+o/p:- 8
+Third Party Modules:-
+moment :- it is used for date functions
+•	we can get what format we want 
+•	we can also calculate how many days between two dates
+To install moment:-
+npm install moment
+Example:-1
+const moment=require('moment')
+console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+
+o/p:- 	May 22nd 2025, 12:06:26 pm
+
+•	Do:- date o is to get nd or th after the number ex:- 2nd or 5th
+•	a:- am or pm 
+Example:-2 
+const moment=require('moment')
+console.log(moment("2025-12-15","YY-MM-DD").format('MMM D'));
+
+Example:-3 To add two months for the current month
+console.log(moment().add(2,'months').format('YYYY-MM-DD'))
+
+Example:-4 To subtract two months from the current month
+console.log(moment().subtract(2,'months').format('YYYY-MM-DD'))
+
+Example:-5 To subtract two dates
+console.log(moment("2025-05-22").diff(moment("2025-01-01"),'days'));
+
+We have some more like
+•	isBefore
+•	isAfter
+•	set locale moment.locale(‘fr’)  to set france date
+Curd operations using fs Modules:-
+Examples using fs module:-
+•	This is not only for creating text files it will be for any files like json or another type
+Create/Write file:-
+const fs=require('fs');
+fs.writeFileSync('students.txt','Hello Students!');
+
+o/p:-when we write we will have a new file in our folder named with students.txt and inside we have the content like Hello Students!
+Read File:-
+const content=fs.readFileSync('students.txt','utf8');
+console.log(content)
+
+o/p:- in terminal we get Hello Students!
+Update file:- To overwrite the previous content we can use writeFileSync or to add to the previous one we can we use appendFileSync
+const contents=fs.appendFileSync('students.txt','heyy');
+const new_content=fs.readFileSync('students.txt','utf8');
+console.log(new_content)
+
+o/p:- Hello Students! Heyy
+Delete file:-
+const deleteFile=fs.unlinkSync("students.txt");
+
+For Mail Transfers:-
+•	Install  npm install nodemailer
+•	We want to set our mail authentication to set we will have a transport we want to create that transport like as creating server
+Example (mailTransfer.js):-
+const nodemailer=require('nodemailer');
+
+let transporter=nodemailer.createTransport({
+    service:'gmail',
+    auth:{
+        user:'attuluripavanaprudulasri@gmail.com',
+        pass:'xfba guzu fjhv wlma'
+    }
+});
+
+let mailOptions={
+    from:'attuluripavanaprudulasri@gmail.com',
+    to:'tasneembanu2005@gmail.com',
+    subject:'Node js Email Example',
+    text:"Hello banu!! What are you doinggg"
+};
+
+transporter.sendMail(mailOptions,(error,info)=>{
+    if(error){
+        return console.log("Error: ",error);
+    }
+    console.log("Email sent:", info.response);
+});
+
+•	Here we can keep our mail password also but for security purpose we will use our mail app password by generating that
+•	For sending mail we will create a option called mail option for that we have mailOptions variable
+

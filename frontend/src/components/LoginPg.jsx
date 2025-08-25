@@ -8,24 +8,43 @@ const LoginPg = ({baseUrl}) => {
   const [username, setUsername] = useState(""); 
   const [password, setPassword] = useState(""); 
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (role === "teacher") {
-    navigate("/teacher-dashboard");
-  } else if (role === "student") {
-    navigate("/sidenav");
+  try {
+    const res = await fetch("http://localhost:5000/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password, role }),
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      alert("✅ Login Successful!");
+
+      if (role === "teacher") {
+        navigate("/teacher-dashboard");
+      } else if (role === "student") {
+        navigate("/sidenav");
+      }
+    } else {
+      const errorData = await res.json();
+      alert(`❌  ${errorData.message || "Invalid credentials"}`);
+    }
+  } catch (err) {
+    alert("⚠️ Something went wrong. Please try again later.");
   }
-  };
+};
   
   return (
     <div className='login-pg'>
     <div className='d-flex flex-row login-container'>
         <div className='form-container'>
-          <form className='text-center login-form'>
-            <h1 className='text-heading'>Welcome Back!!</h1><br/>
+          <form className='text-center login-form' onSubmit={handleSubmit}>
+            <h1 className='text-heading' style={{marginTop:"50px"}}>Welcome Back!!</h1><br/>
             <label>UserName:-</label><br/>
             <input
+                className='inputs'
                 type='text'
                 placeholder='Enter your UserName'
                 value={username}
@@ -34,21 +53,20 @@ const LoginPg = ({baseUrl}) => {
               /><br/><br/>
               <label>Password:-</label><br/>
                 <input
+                  className='inputs'
                   type='password'
                   placeholder='Enter Your Password'
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 /><br/><br/>
-
-            
             <p className='forgot-pwd'>Forgot Password?</p>
             <label>Role:-</label>
             <select value={role} onChange={(e) => setRole(e.target.value)}>
               <option value="teacher">Teacher</option>
               <option value="student">Student</option>
             </select><br/><br/>
-            <Button variant="outline-primary" onClick={handleLogin}>Login</Button>
+            <Button variant="outline-primary" type='submit'>Login</Button>
             <p>Don't Have an account <Button variant="outline-success" onClick={()=>navigate('/register')}>SignIn</Button></p>
           </form>
         </div>
