@@ -35,8 +35,7 @@ import Quiz from "./QuizComponents/Quiz";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
-const baseUrl =
-  import.meta.env.VITE_REACT_APP_BACKEND_URL || "http://localhost:5000";
+const baseUrl = import.meta.env.VITE_REACT_APP_BACKEND_URL || "http://localhost:5000";
 
 function App() {
   const [pdfUrl, setPdfUrl] = useState(null);
