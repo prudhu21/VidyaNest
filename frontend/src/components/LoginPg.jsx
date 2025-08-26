@@ -12,25 +12,28 @@ const LoginPg = ({baseUrl}) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("http://localhost:5000/api/login", {
+    const res = await fetch(`${baseUrl}/api/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password, role }),
     });
 
-    if (res.ok) {
-      const data = await res.json();
-      alert("✅ Login Successful!");
+  if (res.ok) {
+  const data = await res.json();
+  alert("✅ Login Successful!");
 
-      if (role === "teacher") {
-        navigate("/teacher-dashboard");
-      } else if (role === "student") {
-        navigate("/sidenav");
-      }
-    } else {
+  // ✅ Save token in localStorage
+  localStorage.setItem("token", data.token);
+
+  if (role === "teacher") {
+    navigate("/teacher-dashboard");
+  } else if (role === "student") {
+    navigate("/sidenav");
+  }
+  }else {
       const errorData = await res.json();
       alert(`❌  ${errorData.message || "Invalid credentials"}`);
-    }
+  }
   } catch (err) {
     alert("⚠️ Something went wrong. Please try again later.");
   }

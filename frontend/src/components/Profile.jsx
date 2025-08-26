@@ -25,12 +25,18 @@ const Profile = () => {
   });
 
   useEffect(() => {
-    const savedProfileImg = localStorage.getItem("profileImage");
-    if (savedProfileImg) setProfileImage(savedProfileImg);
+  const savedProfileImg = localStorage.getItem("profileImage");
+  if (savedProfileImg) setProfileImage(savedProfileImg);
 
-    const savedUserData = JSON.parse(localStorage.getItem("userData"));
-    if (savedUserData) setFormData(savedUserData);
+  const savedUserData = JSON.parse(localStorage.getItem("userData"));
+  if (savedUserData) {
+    setFormData(prev => ({
+      ...prev,
+      ...savedUserData   
+    }));
+  }
   }, []);
+
 
   const triggerUpdate = () => {
     window.dispatchEvent(new Event("profileUpdated"));
@@ -145,9 +151,10 @@ const Profile = () => {
               required
               type={type}
               placeholder={placeholder}
-              value={formData[key]}
+              value={formData[key] ?? ""} 
               onChange={(e) => handleChange(key, e.target.value)}
             />
+
             <Button variant="outline-secondary" onClick={() => handleClear(key)}>
               <PencilSquare />
             </Button>

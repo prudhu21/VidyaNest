@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { useState } from "react";
 
-// components
+//student components imports
 import LoginPg from "./components/LoginPg";
 import RegisterPg from "./components/RegisterPg";
 import LeftTabsExample from "./components/sideNav";
@@ -17,27 +17,26 @@ import EditorComponents from "./EditorComponents/CodeEditor";
 import StudentResources from "./components/StudentResources";
 import NotFound from "./components/NotFound";
 
-// teacher
+// teacher component imports
 import TeacherDashboard from "./TeacherComponents/TeacherDashboard";
 import UploadNotes from "./TeacherComponents/UploadNotes";
 import UploadVideos from "./TeacherComponents/UploadVideos";
 
-// jobs
+// jobs component imports
 import Job from "./components/Job";
 import JobFilters from "./JobComponents/JobFilters";
 import JobDetails from "./JobComponents/JobDetails";
 
-// quiz
+//quiz component imports
 import QuizHomePg from "./QuizComponents/QuizHomePg";
 import Results from "./QuizComponents/Results";
 import Review from "./QuizComponents/Review";
 import Quiz from "./QuizComponents/Quiz";
 
-// JWT ProtectedRoute
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const baseUrl =
-  import.meta.env.VITE_REACT_APP_BACKEND_URL || "http://localhost:5173";
+  import.meta.env.VITE_REACT_APP_BACKEND_URL || "http://localhost:5000";
 
 function App() {
   const [pdfUrl, setPdfUrl] = useState(null);
@@ -45,53 +44,17 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public Routes */}
         <Route path="/" element={<LoginPg baseUrl={baseUrl} />} />
         <Route path="/register" element={<RegisterPg baseUrl={baseUrl} />} />
 
         {/* Protected Routes */}
-        <Route
-          path="/sidenav"
-          element={
-            <ProtectedRoute>
-              <LeftTabsExample baseUrl={baseUrl} />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/pdfs"
-          element={
-            <ProtectedRoute>
-              <Pdfs baseUrl={baseUrl} />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/mernfs"
-          element={
-            <ProtectedRoute>
-              <MernFs baseUrl={baseUrl} />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/sidenav" element={<ProtectedRoute><LeftTabsExample baseUrl={baseUrl} /></ProtectedRoute>}/>
+        <Route path="/pdfs" element={<ProtectedRoute><Pdfs baseUrl={baseUrl} /></ProtectedRoute>}/>
+        <Route path="/mernfs" element={<ProtectedRoute><MernFs baseUrl={baseUrl} /></ProtectedRoute>}/>
 
         {/* Student Routes */}
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <Dashboard baseUrl={baseUrl} />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/courses"
-          element={
-            <ProtectedRoute>
-              <Courses baseUrl={baseUrl} />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/dashboard" element={<ProtectedRoute><Dashboard baseUrl={baseUrl} /></ProtectedRoute>}/>
+        <Route path="/courses" element={<ProtectedRoute><Courses baseUrl={baseUrl} /></ProtectedRoute>}/>
         <Route
           path="/students-resources"
           element={
