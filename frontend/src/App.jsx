@@ -83,7 +83,7 @@ function App() {
           path="/profile"
           element={
             <ProtectedRoute>
-              <Profile baseUrl="http://localhost:5000" />
+              <Profile baseUrl={baseUrl} />
             </ProtectedRoute>
           }
         />
