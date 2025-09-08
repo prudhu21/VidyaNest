@@ -1,3 +1,16 @@
+.navbg{
+    font-family: 'Poppins', sans-serif;
+    height: 100dvh; 
+}
+.sidenav-bg{
+    background-color: rgb(85, 184, 241);
+    color: rgb(189, 215, 238);
+    position: fixed;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .app-logo{
     border-radius: 100%;
     height: 50px;
@@ -10,7 +23,6 @@
     margin: 20px;
     margin-top: 30px;
 }
-
 .logout-btn{
     margin-left: 1000px;
     height: 40px;
@@ -27,12 +39,6 @@
 .nav-item{
     color: black;
 }
-.sidenav-bg{
-    background-color: rgb(85, 184, 241);
-    color: rgb(189, 215, 238);
-    position:fixed;
-}
-
 .sidenav-profile-img{
     height: 90px;
     width: 90px;
@@ -44,25 +50,20 @@
     height: 3px;
     margin-top: 10pxx;
 }
-
 .sidebar-container {
   transition: width 0.3s ease;
 }
-
 .sidebar-container.collapsed {
   width: 80px !important;
 }
-
 .profile-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-
 .back-icon {
   font-size: 24px;
   color: white;
   cursor: pointer;
   margin-right: 10px;
-
 }

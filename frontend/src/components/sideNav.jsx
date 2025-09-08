@@ -18,6 +18,7 @@ import { BsBoxArrowInLeft } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import './sideNav.css';
 import StudentResources from './StudentResources';
+import Logo from "../assets/logo.jpg";
 
 function LeftTabsExample() {
   const navigate = useNavigate();
@@ -62,16 +63,17 @@ function LeftTabsExample() {
             <Nav variant="pills" className="flex-column sidenav-bg">
               <div className='d-flex flex-row align-items-center'>
                 <img
-                  src={profileImage || DEFAULT_PROFILE_IMAGE}
+                  src={Logo}
                   alt="Profile"
                   className="sidenav-profile-img"
                 />
+                {/*
                 {!isCollapsed && (
                   <div className='ms-2'>
                     <p className='text-white mt-3'>{userData.username || "Guest User"}</p>
                     <p className='text-white'>{userData.email || "guest@mail.com"}</p>
                   </div>
-                )}
+                )}*/}
                 <FiAlignJustify
                   className='back-icon'
                   onClick={handleToggleSidebar}
@@ -107,7 +109,16 @@ function LeftTabsExample() {
               )}
             </Nav>
           </Col>
-          <Col sm={9}>
+          <Col sm={9}
+          style={{
+            transition: 'margin-left 0.3s',
+            marginLeft: isCollapsed ? '80px' : '300px',
+            display: 'flex',
+            justifyContent: 'center',
+            height: '100vh',
+            overflowY: 'auto',
+            alignItems: 'center'
+          }}>
             <Tab.Content>
               <Tab.Pane eventKey="first"><Dashboard /></Tab.Pane>
               <Tab.Pane eventKey="second"><Courses /></Tab.Pane>

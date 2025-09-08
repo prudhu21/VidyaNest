@@ -2,10 +2,10 @@ form {
   padding-left: 20px; 
 }
 .profile-img{
-    height: 140px;
-    width: 140px;
+    width: 240px;
     border-radius: 100%;
     margin: 10px;
+    margin-left: 50px;
 }
 .form-group {
   margin-bottom: 1rem;
@@ -31,12 +31,13 @@ form {
   margin-bottom: 10px;
 }
 .edit-icon{
-  height: 30px;
+  height: 50px;
   object-fit: cover;
   border-radius: 30%;
   margin-top: -40px;
   margin-left: 100px;
   margin-bottom: 20px;
+  background-color: blue;
 }
 .default-profile{
   height: 150px;

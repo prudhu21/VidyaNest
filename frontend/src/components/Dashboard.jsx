@@ -129,10 +129,8 @@ const Dashboard = ({baseUrl}) => {
 
   return (
     <div>
-      
       <div style={{padding: '20px', fontFamily: 'Arial'}}>
       <h3 style={{marginLeft:'600px'}}>Top 5 Courses📊</h3>
-
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px', gap: '10px', flexWrap: 'wrap' }}>
           {allCourses.map(course => (
             <Button
