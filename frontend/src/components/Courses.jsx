@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Courses.css'
 import { useNavigate } from 'react-router-dom';
 
-const Courses = ({baseUrl}) => {
+const Courses = ({baseUrl,setActiveKey}) => {
   const navigate = useNavigate();
   const [searchInput, setSearchInput] = useState('');
 
@@ -201,13 +201,13 @@ const Courses = ({baseUrl}) => {
                 <div className='d-flex flex-row'>
                   <button 
                     className='btn-outline-success start-btn' 
-                    onClick={()=>navigate('/mernfs')}
+                    onClick={() => setActiveKey("mernfs")}
                   >
                     Start
                   </button>
                   <button 
                     className='btn-outline-success' 
-                    onClick={()=>navigate('/quiz')}
+                    onClick={() => setActiveKey("quiz")}
                   >
                     Quiz
                   </button>

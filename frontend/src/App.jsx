@@ -15,6 +15,7 @@ import Contact from "./components/Contact";
 import MernFs from "./components/MernFs";
 import EditorComponents from "./EditorComponents/CodeEditor";
 import StudentResources from "./components/StudentResources";
+import ProfileHeader from "./components/Header";
 import NotFound from "./components/NotFound";
 
 // teacher component imports
@@ -91,6 +92,15 @@ function App() {
           element={
             <ProtectedRoute>
               <Contact baseUrl={baseUrl} />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/profile-header"
+          element={
+            <ProtectedRoute>
+              <ProfileHeader baseUrl={baseUrl}/>
             </ProtectedRoute>
           }
         />

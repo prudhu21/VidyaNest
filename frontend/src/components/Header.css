@@ -1,0 +1,127 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  height: 80px;
+  background-color: #538ce7; /* slate-800 */
+  color: #fff;
+  border-bottom: 1px solid #4986da; /* slate-700 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.header-app-icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+/* Left section */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: 150px;
+  margin-top: 8px;
+  z-index: 1000;
+  color: black;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #90d4f8;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  background: #2563eb; /* blue-600 */
+  padding: 0.4rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Right section */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 50px;
+  width: 150px;
+}
+
+.header-right:hover {
+  cursor: pointer;
+  background-color:rgb(103, 161, 244);
+  width: 170px;
+  padding-right: 20px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.user-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.settings-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #cbd5e1; /* slate-300 */
+  transition: color 0.2s ease-in-out;
+}
+
+.settings-btn:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .user-name {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .site-name {
+    display: none;
+  }
+}

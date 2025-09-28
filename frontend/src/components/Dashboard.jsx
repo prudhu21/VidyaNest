@@ -5,6 +5,7 @@ import {BarChart,Bar,XAxis,YAxis,CartesianGrid,Tooltip,Legend,ResponsiveContaine
 import './Dashboard.css';
 import { Button, Modal, Form, InputGroup } from 'react-bootstrap';
 import { BsChatDots, BsSend } from 'react-icons/bs';
+import ProfileHeader from './Header';
 
 const Dashboard = ({baseUrl}) => {
   const [showChat, setShowChat] = useState(false);
@@ -27,7 +28,6 @@ const Dashboard = ({baseUrl}) => {
     setIsLoading(true);
 
     try {
-      // Call OpenAI API
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
@@ -142,7 +142,7 @@ const Dashboard = ({baseUrl}) => {
               {course}
             </Button>
           ))}
-        </div>
+      </div>
 
       <ResponsiveContainer width="100%" height={400}>
         <BarChart data={chartData}>
@@ -163,7 +163,6 @@ const Dashboard = ({baseUrl}) => {
       </ResponsiveContainer>
       </div>
 
-      {/* Chat button */}
       <Button
         variant="dark"
         style={{
@@ -185,7 +184,6 @@ const Dashboard = ({baseUrl}) => {
         <BsChatDots size={24} />
       </Button>
 
-      {/* Chat modal */}
       <Modal
         show={showChat}
         onHide={() => setShowChat(false)}

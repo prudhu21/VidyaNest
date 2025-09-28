@@ -33,7 +33,7 @@ const Contact = ({baseUrl}) => {
   };
 
     return (
-      <div className='d-flex'>
+      <div className='d-flex' style={{display:"flex",justifyContent:"center",alignItems:"center",minHeight:"100dvh",flexWrap:"wrap"}}>
         <div>
           <img src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?uid=R163686062&ga=GA1.1.761964938.1707574847&semt=ais_hybrid&w=740"
             className='contact-img'/>

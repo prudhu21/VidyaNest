@@ -88,7 +88,7 @@ const Profile = () => {
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
-      <div className="d-flex">
+      <div className="d-flex align-items-center mt-5">
         <div className="relative">
           <img
             src={profileImage}
@@ -161,8 +161,8 @@ const Profile = () => {
             controlId={`form-${key}`}
             className="d-flex align-items-center"
           >
-            <Form.Label className="form-label">{label}</Form.Label>
-            <Form.Control
+            <Form.Label className="form-label" style={{width:"100px"}}>{label}</Form.Label>
+            <Form.Control style={{width:"200px"}}
               className="form-element"
               required
               type={type}

@@ -2,7 +2,8 @@ form {
   padding-left: 20px; 
 }
 .profile-img{
-    width: 240px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     margin: 10px;
     margin-left: 50px;

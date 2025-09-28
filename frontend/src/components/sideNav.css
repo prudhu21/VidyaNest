@@ -3,13 +3,15 @@
     height: 100dvh; 
 }
 .sidenav-bg{
-    background-color: rgb(85, 184, 241);
+    background-color: #5593eb;
     color: rgb(189, 215, 238);
     position: fixed;
     height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    top: 0%;
+    margin-top: 80px;
 }
 .app-logo{
     border-radius: 100%;

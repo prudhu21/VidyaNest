@@ -3,6 +3,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import './InterviewQuestions.css'
 import Accordion from 'react-bootstrap/Accordion';
+import ProfileHeader from './Header';
 
 const InterviewQuestions = ({baseUrl}) => {
   return (
@@ -941,13 +942,11 @@ const InterviewQuestions = ({baseUrl}) => {
 
               </Accordion.Body>
             </Accordion.Item>
-
         </Accordion>
       </Tab>
-
-
     </Tabs>
   );
+  
 }
 
 
