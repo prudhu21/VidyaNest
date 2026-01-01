@@ -7,27 +7,45 @@ const jwt = require("jsonwebtoken");
 const JWT_SECRET = process.env.JWT_SECRET || "supersecretkey";
 
 const app = express();
-app.use(express.json());
+
+// CORS configuration - MUST come before other middleware
 app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:3000',
     'https://vidya-nest-5htt.vercel.app'
   ],
-  methods: ['GET', 'POST', 'PUT'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
+
+// Handle preflight requests
+app.options('*', cors());
+
+app.use(express.json());
 
 const port = process.env.PORT || 5000;
 
 const uri = process.env.MongoDb_url || 
-  "mongodb+srv://appUser:prudhu123@vidyanestcluster.4ahxhfd.mongodb.net/VidyaNestDB?retryWrites=true&w=majority&appName=VidyaNestCluster";
+"mongodb+srv:<db_username>:<db_password>@vidyanestcluster.4ahxhfd.mongodb.net/?appName=VidyaNestCluster";
 
-mongoose.connect(uri)
-  .then(() => console.log("✅ MongoDB connected"))
+console.log("🔄 Attempting to connect to MongoDB...");
+
+mongoose.connect(uri, {
+  serverSelectionTimeoutMS: 10000,
+  socketTimeoutMS: 45000,
+})
+  .then(() => console.log("✅ MongoDB connected successfully"))
   .catch(err => {
     console.error("❌ MongoDB connection error:", err.message);
-    process.exit(1);
+    console.error("\n⚠️  Troubleshooting steps:");
+    console.error("1. Check if MongoDB Atlas cluster is running");
+    console.error("2. Verify your IP is whitelisted in Network Access");
+    console.error("3. Confirm database credentials are correct");
+    console.error("4. Try running: npm install mongodb@latest mongoose@latest\n");
+    // Don't exit, allow server to start for other testing
+    console.log("⚠️  Server starting without database connection...");
   });
 
 const userSchema = new mongoose.Schema({

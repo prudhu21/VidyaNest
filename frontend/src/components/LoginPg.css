@@ -8,7 +8,7 @@
   height: 100vh;
 }
 .login-img{
-    height: 500px;
+    height: 550px;
     width: 420px;
     margin-left: 90px;
 }
@@ -39,6 +39,11 @@
   border-color: rgb(0, 255, 34);
   border-radius: 10px;
   text-align: center;
+}
+.default-credentails{
+  margin-top: 20px;
+  color: red;
+  font-size: 15px;
 }
 @media screen and (max-width: 768px) {
   .login-container {

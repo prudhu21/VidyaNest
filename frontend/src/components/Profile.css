@@ -14,13 +14,13 @@ form {
   align-items: center;
   justify-content: flex-start;
 }
-
 .form-label { 
   margin-right: 50px;
   font-weight: 500;
   width: 150px;
   white-space: nowrap; 
 }
+
 
 .form-element {
   flex: 1; 
